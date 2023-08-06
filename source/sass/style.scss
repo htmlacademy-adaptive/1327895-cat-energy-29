@@ -1,3 +1,9 @@
 // Начните писать стили здесь
-@use "./comman/global.scss";
 @use "./comman/fonts.scss";
+@use "./comman/global.scss";
+@use "./pages/main-header.scss";
+@use "./pages/footer.scss";
+@use "./pages/page-main.scss";
+@use "./pages/page-catalog.scss";
+@use "./pages/form.scss";
+@use "./pages/adress.scss";
