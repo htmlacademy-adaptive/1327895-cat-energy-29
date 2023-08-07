@@ -1,0 +1,26 @@
+.example__text {
+  margin: 0;
+  padding: 0;
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__item-value {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+

@@ -1,0 +1,22 @@
+.address {
+  margin: 0 auto;
+}
+
+.address__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.address__text {
+  line-height: 20px;
+}
+
+.address__map {
+  display: block;
+  object-fit: contain;
+}
+
