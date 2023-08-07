@@ -10,24 +10,28 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__wrapper">
+    <div class="main-header__wrapper container">
+      <a class="main-header__link-image" href="index.html">
       <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
         alt="Логотип интернет магазина «Кэт энерджи».">
-      <img class="main-header__logo-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
-      <nav class="main-nav">
+      </a>
+      <a class="main-header__logo-text" href="index.html">
+         <img class="main-header__logo-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
+      </a>
+      <nav class="main-header__nav main-nav">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
         </button>
-        <div class="main-nav__container">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link">Главная</a>
+              <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+              <a  class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="form.html">Подбор программы</a>
+              <a class="main-nav__link  main-nav__link--current">Подбор программы</a>
             </li>
           </ul>
         </div>

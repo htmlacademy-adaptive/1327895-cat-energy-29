@@ -1,5 +1,17 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+.advantages__heading {
+  margin-bottom: 42px;
+}
+
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  row-gap: 26px;
+
 }

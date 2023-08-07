@@ -1,6 +1,16 @@
+.example {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__heading {
+  margin-bottom: 40px;
+}
+
 .example__text {
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .example__list {
@@ -8,6 +18,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .example__item {
@@ -22,5 +33,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.example__costs-characteristic {
+  color: #000000;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
 }
 
