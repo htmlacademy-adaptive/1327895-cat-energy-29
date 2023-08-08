@@ -1,6 +1,7 @@
 // Начните писать стили здесь
 @use "comman/fonts.scss";
 @use "comman/global.scss";
+@use "blocks/title.scss";
 @use "blocks/main-header.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/footer.scss";
@@ -16,5 +17,8 @@
 @use "blocks/form.scss";
 @use "blocks/catalog.scss";
 @use "blocks/card.scss";
+@use "blocks/aditional.scss";
 @use "blocks/additional-card.scss";
 @use "blocks/buttons.scss";
+@use "blocks/text-label.scss";
+@use "blocks/input-text.scss";
