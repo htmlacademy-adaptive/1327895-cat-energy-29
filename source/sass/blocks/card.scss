@@ -1,0 +1,47 @@
+.card {
+  padding-top: 19px;
+  padding-bottom: 14px;
+}
+
+.card__product-name {
+  text-decoration: none;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: #222222;
+
+  &--more {
+    text-align: center;
+    color: #111111;
+    margin-bottom: 8px;
+  }
+}
+
+.card__description {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__more {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 21px;
+  text-align: center;
+}
+
+.card__button {
+  text-align: center;
+}

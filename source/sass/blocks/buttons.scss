@@ -1,5 +1,5 @@
 .button {
-  display: inline-block;
+  display: block;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
@@ -12,5 +12,10 @@
   &--primary {
     background-color: #68b738;
     color: #ffffff;
+  }
+
+  &--secondary {
+    background-color: #f2f2f2;
+    color: #444444;
   }
 }
