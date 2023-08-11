@@ -1,0 +1,21 @@
+.promo {
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(#68b738d9 63%, #ffffff 37%);
+  // background-image: url("/source/img/promo-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px 35px 0 36px;
+}
+
+.promo__heading {
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.promo__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}

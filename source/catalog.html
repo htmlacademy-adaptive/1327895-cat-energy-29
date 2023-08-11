@@ -1,39 +1,45 @@
 <!DOCTYPE html>
+
 <html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link  href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__wrapper">
+    <div class="main-header__wrapper container">
+      <a class="main-header__link-image" href="index.html">
       <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
         alt="Логотип интернет магазина «Кэт энерджи».">
-      <img class="main-header__logo-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
-      <nav class="main-nav">
+      </a>
+      <a class="main-header__logo-text" href="index.html">
+        <img class="main-header__link-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
+      </a>
+      <nav class="main-header__nav main-nav">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
         </button>
-        <div class="main-nav__container">
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link  main-nav__link--current">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
+              <a href="form.html" class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
-  <main class="page-catalog">
-    <section class="catalog">
+  <main class= "page-catalog">
+    <section class="page-catalog__assortment catalog container">
       <h1 class="catalog__heading heading">Каталог продукции</h1>
       <ul class="catalog__list">
         <li class="catalog__item card">
@@ -42,8 +48,6 @@
             <a class="card__product-name" href="#">
               <h3 class="card__title">Cat Energy PRO 500 г</h3>
             </a>
-
-
             <ul class="card__description">
               <li class="card__item">
                 <span class="card__appellation">Масса</span>
@@ -201,55 +205,57 @@
         </li>
         <li class="catalog__item catalog__item--more card">
           <div class="card__text">
-            <h3 class="card__product-name">Показать еще 100500 товаров</h3>
-            <p class="card__assortment">На самом деле вкусов гораздо больше!</p>
+            <a class="card__product-name" href="#">
+              <h3 class="card__title card__title--more">Показать еще 100500 товаров</h3>
+            </a>
+            <p class="card__more">На самом деле вкусов гораздо больше!</p>
             <a class="card__button button button--secondary" href="#">Заказать</a>
           </div>
         </li>
       </ul>
     </section>
-    <section class="additional">
-      <h2 class="additional__heading">Дополнительные товары</h2>
+    <section class="page-catalog__additional additional">
+      <h2 class="additional__heading title">Дополнительные товары</h2>
       <ul class="additional__list">
-        <li class="additional__item">
-          <h3 class="additional__name">Сахарозаменитель</h3>
-          <ul class="additional__description-list">
-            <li class="additional__card-item">
-              <span class="additional__card-appellation">1 упаковка (100 г)</span>
-              <span class="additional__card-value">200 ₽</span>
+        <li class="additional__item additional-card">
+          <h3 class="additional-card__name">Сахарозаменитель</h3>
+          <ul class="additional-card__description">
+            <li class="additional-card__item">
+              <span class="additional-card__appellation">1 упаковка (100 г)</span>
+              <span class="additional-card__value">200 ₽</span>
             </li>
           </ul>
-          <a class="additional__card-link button button--primary" href="#">Заказать</a>
+          <a class="additional-card__link button button--primary" href="#">Заказать</a>
         </li>
-        <li class="additional__item">
-          <h3 class="additional__name">Питьевая вода</h3>
-          <ul class="additional__description-list">
-            <li class="additional__card-item">
-              <span class="additional__card-appellation">5 литров</span>
-              <span class="additional__card-value">50 ₽</span>
+        <li class="additional__item additional-card">
+          <h3 class="additional-card__name">Питьевая вода</h3>
+          <ul class="additional-card__description">
+            <li class="additional-card__item">
+              <span class="additional-card__appellation">5 литров</span>
+              <span class="additional-card__value">50 ₽</span>
             </li>
           </ul>
-          <a class="additional__card-link button button--primary" href="#">Заказать</a>
+          <a class="additional-card__link button button--primary" href="#">Заказать</a>
         </li>
-        <li class="additional__item">
-          <h3 class="additional__name">Молоко</h3>
-          <ul class="additional__description-list">
-            <li class="additional__card-item">
-              <span class="additional__card-appellation">1 литр</span>
-              <span class="additional__card-value">100 ₽</span>
+        <li class="additional__item additional-card">
+          <h3 class="additional-card__name">Молоко</h3>
+          <ul class="additional-card__description">
+            <li class="additional-card__item">
+              <span class="additional-card__appellation">1 литр</span>
+              <span class="additional-card__value">100 ₽</span>
             </li>
           </ul>
-          <a class="additional__card-link button button--primary" href="#">Заказать</a>
+          <a class="additional-card__link button button--primary" href="#">Заказать</a>
         </li>
-        <li class="additional__item">
-          <h3 class="additional__name">Витамины</h3>
-          <ul class="additional__description-list">
-            <li class="additional__card-item">
-              <span class="additional__card-appellation">1 упаковка (30 г)</span>
-              <span class="additional__card-value">300 ₽</span>
+        <li class="additional__item additional-card">
+          <h3 class="additional-card__name">Витамины</h3>
+          <ul class="additional-card__description">
+            <li class="additional-card__item">
+              <span class="additional-card__appellation">1 упаковка (30 г)</span>
+              <span class="additional-card__value">300 ₽</span>
             </li>
           </ul>
-          <a class="additional__card-link button button--primary" href="#">Заказать</a>
+          <a class="additional-card__link button button--primary" href="#">Заказать</a>
         </li>
       </ul>
       <div class="additional__present">

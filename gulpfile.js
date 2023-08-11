@@ -35,7 +35,7 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles)).on('change', browser.reload);
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
