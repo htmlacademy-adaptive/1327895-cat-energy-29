@@ -1,10 +1,25 @@
+@use "../mixins/media.scss" as m;
+
 .example {
   padding-top: 25px;
   padding-bottom: 40px;
 }
 
+
+.example__wrapper {
+  @include m.desktop {
+    display: flex;
+  }
+}
+
 .example__heading {
   margin-bottom: 40px;
+}
+
+.exsample__content {
+  @include m.desktop {
+    width: 436px;
+  }
 }
 
 .example__text {
@@ -24,6 +39,12 @@
 .example__item {
   display: flex;
   flex-direction: column;
+  min-width: 124px;
+  text-align: center;
+
+  @include m.tablet {
+    min-width: 162px;
+  }
 }
 
 .example__item-value {

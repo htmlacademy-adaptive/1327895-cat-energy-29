@@ -1,21 +1,40 @@
+@use "../mixins/media.scss" as m;
+
 .programs {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.programs__title {
-  margin-bottom: 29px;
-  line-height: 37px;
 }
 
 .programs__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include m.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   padding: 30px 33px 18px 20px;
+  background-color: #f2f2f2;
+
+  @include m.desktop {
+    width: 570px;
+    padding: 47px 61px 59px 52px;
+  }
+}
+
+.programs__title {
+  margin-bottom: 29px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @include m.tablet {
+    line-height: 36px;
+  }
 }
 
 .programs__text {

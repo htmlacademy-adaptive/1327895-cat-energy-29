@@ -1,15 +1,25 @@
+@use "../mixins/media.scss" as m;
+
 .address {
   margin: 0 auto;
 }
 
 .address__wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 26px;
   padding-bottom: 26px;
-  justify-content: space-between;
+
+  @include m.desktop {
+    width: 565px;
+    padding: 60px 78px 60px 80px;
+  }
 }
 
 .address__title {
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -17,10 +27,25 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+
+  @include m.tablet {
+    max-width: 170px;
+  }
 }
 
 .address__text {
+  padding: 0;
+  margin: 0;
   line-height: 20px;
+
+  @include m.tablet {
+    max-width: 170px;
+    text-align: right;
+  }
+
+  @include m.desktop {
+    text-align: left;
+  }
 }
 
 .address__map {

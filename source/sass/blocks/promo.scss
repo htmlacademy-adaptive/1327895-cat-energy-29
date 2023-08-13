@@ -1,3 +1,5 @@
+@use "../mixins/media.scss" as m;
+
 .promo {
   color: #ffffff;
   text-align: center;
@@ -5,7 +7,6 @@
   // background-image: url("/source/img/promo-background.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 27px 35px 0 36px;
 }
 
 .promo__heading {
@@ -14,8 +15,19 @@
 }
 
 .promo__slogan {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 14px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+}
+
+.promo__link {
+  padding: 7px 44px;
+
+  @include m.tablet {
+    width: 224px;
+    padding: 14px 26px;
+  }
 }

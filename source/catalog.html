@@ -4,16 +4,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link  href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper container">
       <a class="main-header__link-image" href="index.html">
-      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
-        alt="Логотип интернет магазина «Кэт энерджи».">
+        <picture class="main-header__logo">
+          <source srcset="./img/logo-desktop.svg" width="202" height="59" media="(min-width: 1440px)">
+          <source srcset="./img/logo-tablet.svg" width="174" height="50" media="(min-width: 768px)">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
+            alt="Логотип интернет магазина «Кэт энерджи».">
+        </picture>
       </a>
       <a class="main-header__logo-text" href="index.html">
         <img class="main-header__link-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
@@ -38,7 +43,7 @@
       </nav>
     </div>
   </header>
-  <main class= "page-catalog">
+  <main class="page-catalog">
     <section class="page-catalog__assortment catalog container">
       <h1 class="catalog__heading heading">Каталог продукции</h1>
       <ul class="catalog__list">
@@ -214,53 +219,56 @@
         </li>
       </ul>
     </section>
-    <section class="page-catalog__additional additional">
+    <section class="page-catalog__additional additional container">
       <h2 class="additional__heading title">Дополнительные товары</h2>
-      <ul class="additional__list">
-        <li class="additional__item additional-card">
-          <h3 class="additional-card__name">Сахарозаменитель</h3>
-          <ul class="additional-card__description">
-            <li class="additional-card__item">
-              <span class="additional-card__appellation">1 упаковка (100 г)</span>
-              <span class="additional-card__value">200 ₽</span>
-            </li>
-          </ul>
-          <a class="additional-card__link button button--primary" href="#">Заказать</a>
-        </li>
-        <li class="additional__item additional-card">
-          <h3 class="additional-card__name">Питьевая вода</h3>
-          <ul class="additional-card__description">
-            <li class="additional-card__item">
-              <span class="additional-card__appellation">5 литров</span>
-              <span class="additional-card__value">50 ₽</span>
-            </li>
-          </ul>
-          <a class="additional-card__link button button--primary" href="#">Заказать</a>
-        </li>
-        <li class="additional__item additional-card">
-          <h3 class="additional-card__name">Молоко</h3>
-          <ul class="additional-card__description">
-            <li class="additional-card__item">
-              <span class="additional-card__appellation">1 литр</span>
-              <span class="additional-card__value">100 ₽</span>
-            </li>
-          </ul>
-          <a class="additional-card__link button button--primary" href="#">Заказать</a>
-        </li>
-        <li class="additional__item additional-card">
-          <h3 class="additional-card__name">Витамины</h3>
-          <ul class="additional-card__description">
-            <li class="additional-card__item">
-              <span class="additional-card__appellation">1 упаковка (30 г)</span>
-              <span class="additional-card__value">300 ₽</span>
-            </li>
-          </ul>
-          <a class="additional-card__link button button--primary" href="#">Заказать</a>
-        </li>
-      </ul>
-      <div class="additional__present">
-        <a class="additional__present-link" href="#">Закажите все и получите чехол для кота в подарок!</a>
+      <div class="additional__wrapper">
+        <ul class="additional__list">
+          <li class="additional__item additional-card">
+            <h3 class="additional-card__name">Сахарозаменитель</h3>
+            <ul class="additional-card__description">
+              <li class="additional-card__item">
+                <span class="additional-card__appellation">1 упаковка (100 г)</span>
+                <span class="additional-card__value">200 ₽</span>
+              </li>
+            </ul>
+            <a class="additional-card__link button button--primary" href="#">Заказать</a>
+          </li>
+          <li class="additional__item additional-card">
+            <h3 class="additional-card__name">Питьевая вода</h3>
+            <ul class="additional-card__description">
+              <li class="additional-card__item">
+                <span class="additional-card__appellation">5 литров</span>
+                <span class="additional-card__value">50 ₽</span>
+              </li>
+            </ul>
+            <a class="additional-card__link button button--primary" href="#">Заказать</a>
+          </li>
+          <li class="additional__item additional-card">
+            <h3 class="additional-card__name">Молоко</h3>
+            <ul class="additional-card__description">
+              <li class="additional-card__item">
+                <span class="additional-card__appellation">1 литр</span>
+                <span class="additional-card__value">100 ₽</span>
+              </li>
+            </ul>
+            <a class="additional-card__link button button--primary" href="#">Заказать</a>
+          </li>
+          <li class="additional__item additional-card">
+            <h3 class="additional-card__name">Витамины</h3>
+            <ul class="additional-card__description">
+              <li class="additional-card__item">
+                <span class="additional-card__appellation">1 упаковка (30 г)</span>
+                <span class="additional-card__value">300 ₽</span>
+              </li>
+            </ul>
+            <a class="additional-card__link button button--primary" href="#">Заказать</a>
+          </li>
+        </ul>
+        <div class="additional__present">
+          <a class="additional__present-link" href="#">Закажите все и получите чехол для кота в подарок!</a>
+        </div>
       </div>
+
     </section>
   </main>
   <section class="address">

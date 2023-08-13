@@ -4,15 +4,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link  href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper container">
       <a class="main-header__link-image" href="index.html">
-      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
-        alt="Логотип интернет магазина «Кэт энерджи».">
+        <picture class="main-header__logo">
+          <source srcset="./img/logo-desktop.svg" width="202" height="59" media="(min-width: 1440px)">
+          <source srcset="./img/logo-tablet.svg" width="174" height="50" media="(min-width: 768px)">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
+            alt="Логотип интернет магазина «Кэт энерджи».">
+        </picture>
       </a>
       <a class="main-header__logo-text" href="index.html">
         <img class="main-header__link-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
@@ -27,7 +33,7 @@
               <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a  class="main-nav__link" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link  main-nav__link--current">Подбор программы</a>
@@ -103,35 +109,36 @@
         </fieldset>
         <fieldset class="form__group">
           <h2 class="form__title title">Дополнительно</h2>
-          <p class="form__additionally-item">
-            <label class="form__additionally-label">
-              <input class="form__additionally-input" type="checkbox" name="supplements" value="sweetener" checked>
-              <span class="form__additionally-mark"></span>
-              <span class="form__additionally-name text-label">Сахарозаменитель</span>
-            </label>
-          </p>
-          <p class="form__additionally-item">
-            <label class="form__additionally-label">
-              <input class="form__additionally-input" type="checkbox" name="supplements" value="milk">
-              <span class="form__additionally-mark"></span>
-              <span class="form__additionally-name text-label">Молоко</span>
-            </label>
-          </p>
-          <p class="form__additionally-item">
-            <label class="form__additionally-label">
-              <input class="form__additionally-input" type="checkbox" name="supplements" value="water">
-              <span class="form__additionally-mark"></span>
-              <span class="form__additionally-name text-label">Питьевая вода</span>
-            </label>
-          </p>
-          <p class="form__additionally-item">
-            <label class="form__additionally-label">
-              <input class="form__additionally-input" type="checkbox" name="supplements" value="vitamins">
-              <span class="form__additionally-mark"></span>
-              <span class="form__additionally-name text-label">Витамины</span>
-            </label>
-          </p>
-          </ul>
+          <div class="form__additionally-wrapper">
+            <p class="form__additionally-item">
+              <label class="form__additionally-label">
+                <input class="form__additionally-input" type="checkbox" name="supplements" value="sweetener" checked>
+                <span class="form__additionally-mark"></span>
+                <span class="form__additionally-name text-label">Сахарозаменитель</span>
+              </label>
+            </p>
+            <p class="form__additionally-item">
+              <label class="form__additionally-label">
+                <input class="form__additionally-input" type="checkbox" name="supplements" value="milk">
+                <span class="form__additionally-mark"></span>
+                <span class="form__additionally-name text-label">Молоко</span>
+              </label>
+            </p>
+            <p class="form__additionally-item">
+              <label class="form__additionally-label">
+                <input class="form__additionally-input" type="checkbox" name="supplements" value="water">
+                <span class="form__additionally-mark"></span>
+                <span class="form__additionally-name text-label">Питьевая вода</span>
+              </label>
+            </p>
+            <p class="form__additionally-item">
+              <label class="form__additionally-label">
+                <input class="form__additionally-input" type="checkbox" name="supplements" value="vitamins">
+                <span class="form__additionally-mark"></span>
+                <span class="form__additionally-name text-label">Витамины</span>
+              </label>
+            </p>
+          </div>
         </fieldset>
         <button class="form__button button button--primary" type="submit">Отправить заявку</button>
         <span class="form__explanation">* &mdash; Обязательные поля</span>

@@ -1,4 +1,27 @@
+@use "../mixins/media.scss" as m;
+
+.main-header {
+  @include m.tablet {
+    padding-top: 25px;
+  }
+
+  @include m.desktop {
+    padding-top: 56px;
+  }
+}
+
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__logo {
+  display: block;
+}
+
+.main-header__link-text {
+  @include m.tablet {
+    display: none;
+  }
 }

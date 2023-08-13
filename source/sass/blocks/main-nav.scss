@@ -1,17 +1,26 @@
+@use "../mixins/media.scss" as m;
+
 .main-nav {
   position: relative;
 }
 
-.main-nav__wrapper {
-  position: absolute;
-  left: 0;
-  display: none;
+.main-nav__toggle {
+  @include m.tablet {
+    display: none;
+  }
 }
 
 .main-nav__list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: none;
+
+  @include m.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
 }
 
 .main-nav__link {
