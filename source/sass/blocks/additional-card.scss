@@ -7,7 +7,7 @@
   padding-bottom: 19px;
 
   @include m.tablet {
-    padding: 26px 38px 28px 38px;
+    padding: 17px 38px 28px 38px;
   }
 
   @include m.desktop {
@@ -15,16 +15,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 0 17px 0;
   }
 }
 
 .additional-card__name {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
   font-family: "Oswald", sans-serif;
   color: #222222;
   margin-bottom: 13px;
   text-transform: uppercase;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-card__description {

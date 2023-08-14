@@ -18,18 +18,14 @@
   gap: 94px 20px;
 
   @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 37px 135px;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
   @include m.desktop {
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 95px;
   }
 }
 
-.advantages__item {
-  @include m.tablet {
-    width: 250px;
-  }
-}

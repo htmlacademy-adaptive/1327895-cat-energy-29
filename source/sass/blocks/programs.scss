@@ -6,13 +6,16 @@
 }
 
 .programs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @include m.desktop {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 80px;
   }
 }
@@ -22,7 +25,6 @@
   background-color: #f2f2f2;
 
   @include m.desktop {
-    width: 570px;
     padding: 47px 61px 59px 52px;
   }
 }

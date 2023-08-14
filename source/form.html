@@ -14,14 +14,14 @@
     <div class="main-header__wrapper container">
       <a class="main-header__link-image" href="index.html">
         <picture class="main-header__logo">
-          <source srcset="./img/logo-desktop.svg" width="202" height="59" media="(min-width: 1440px)">
-          <source srcset="./img/logo-tablet.svg" width="174" height="50" media="(min-width: 768px)">
-          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38"
+          <source srcset="./img/logo/logo-desktop.svg" width="202" height="59" media="(min-width: 1440px)">
+          <source srcset="./img/logo/logo-tablet.svg" width="174" height="50" media="(min-width: 768px)">
+          <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" width="33" height="38"
             alt="Логотип интернет магазина «Кэт энерджи».">
         </picture>
       </a>
       <a class="main-header__logo-text" href="index.html">
-        <img class="main-header__link-text" src="img/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
+        <img class="main-header__link-text" src="img/logo/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
       </a>
       <nav class="main-header__nav main-nav">
         <button class="main-nav__toggle">
@@ -48,58 +48,62 @@
       <h1 class="ration__heading heading">Подбор программы</h1>
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="ration__selection form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__group">
-          <h2 class="visually-hidden">Введите данные вашего кота.</h2>
-          <p class="form__data-item">
-            <label class="form__data-label text-label" for="name">Имя:*</label>
-            <input class="form__input input-text" id="name" type="text" placeholder="Барсик">
-          </p>
-          <p class="form__data-item">
-            <label class="form__data-label text-label" for="weight">Вес (кг):*</label>
-            <input class="form__input input-text" id="weight" type="text" placeholder="7" required>
-          </p>
-          <p class="form__data-item">
-            <label class="form__data-label text-label" for="age">Возраст (лет):*</label>
-            <input class="form__input input-text" id="age" type="number" placeholder="7" required>
-          </p>
-          </ul>
-        </fieldset>
-        <fieldset class="form__group">
-          <h2 class="visually-hidden">Укажите цель составления программы.</h2>
-          <p class="form__purpose-item">
-            <label class="form__purpose-label text-label">
-              <span class="form__radio-mark"></span>
-              <input class="form__radio" type="radio" name="purpose" checked>
-              <span class="form__purpose-name">Похудение</span>
-            </label>
-          </p>
-          <p class="form__purpose-item">
-            <label class="form__purpose-label text-label">
-              <span class="form__radio-mark"></span>
-              <input class="form__radio" type="radio" name="purpose">
-              <span class="form__purpose-name">Набор массы</span>
-            </label>
-          </p>
-          <p class="form__purpose-item">
-            <label class="form__purpose-label text-label">
-              <span class="form__radio-mark"></span>
-              <input class="form__radio" type="radio" name="purpose">
-              <span class="form__purpose-name">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </p>
-        </fieldset>
+        <div class="form__wrapper">
+          <fieldset class="form__group">
+            <h2 class="visually-hidden">Введите данные вашего кота.</h2>
+            <p class="form__data-item">
+              <label class="form__data-label text-label" for="name">Имя:*</label>
+              <input class="form__input input-text" id="name" type="text" placeholder="Барсик">
+            </p>
+            <p class="form__data-item">
+              <label class="form__data-label text-label" for="weight">Вес (кг):*</label>
+              <input class="form__input input-text" id="weight" type="text" placeholder="7" required>
+            </p>
+            <p class="form__data-item">
+              <label class="form__data-label text-label" for="age">Возраст (лет):*</label>
+              <input class="form__input input-text" id="age" type="number" placeholder="7" required>
+            </p>
+            </ul>
+          </fieldset>
+          <fieldset class="form__group">
+            <h2 class="visually-hidden">Укажите цель составления программы.</h2>
+            <p class="form__purpose-item">
+              <label class="form__purpose-label text-label">
+                <span class="form__radio-mark"></span>
+                <input class="form__radio" type="radio" name="purpose" checked>
+                <span class="form__purpose-name">Похудение</span>
+              </label>
+            </p>
+            <p class="form__purpose-item">
+              <label class="form__purpose-label text-label">
+                <span class="form__radio-mark"></span>
+                <input class="form__radio" type="radio" name="purpose">
+                <span class="form__purpose-name">Набор массы</span>
+              </label>
+            </p>
+            <p class="form__purpose-item">
+              <label class="form__purpose-label text-label">
+                <span class="form__radio-mark"></span>
+                <input class="form__radio" type="radio" name="purpose">
+                <span class="form__purpose-name">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </p>
+          </fieldset>
+        </div>
         <fieldset class="form__group">
           <h2 class="form__title title">Контактные данные (владельца кота)</h2>
-          <p class="form__contacts-item">
-            <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
-            <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
-              placeholder="кuklachev@gmail.com" required>
-          </p>
-          <p class="form__contacts-item">
-            <label for="phone" class="form__contacts-label text-label">Телефон:*</label>
-            <input class="form__contacts-input form__contacts-input--tel input-text" id="phone" type="text"
-              placeholder="8 (960) 900-60-90" required>
-          </p>
+          <div class="form__wrapper">
+            <p class="form__contacts-item">
+              <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
+              <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
+                placeholder="кuklachev@gmail.com" required>
+            </p>
+            <p class="form__contacts-item">
+              <label for="phone" class="form__contacts-label text-label">Телефон:*</label>
+              <input class="form__contacts-input form__contacts-input--tel input-text" id="phone" type="text"
+                placeholder="8 (960) 900-60-90" required>
+            </p>
+          </div>
         </fieldset>
         <fieldset class="form__group">
           <h2 class="form__title title">Комментарий</h2>
@@ -156,7 +160,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <a class="footer__logo-link" href="#">
-        <img class="footer__logo" src="img/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
+        <img class="footer__logo" src="img/logo/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
       </a>
       <ul class="footer__socials">
         <li class="footer__socials-item">
