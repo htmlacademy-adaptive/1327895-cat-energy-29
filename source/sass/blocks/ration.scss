@@ -1,3 +1,5 @@
+@use "../mixins/media.scss" as m;
+
 .ration__heading {
   margin-bottom: 37px;
 }
@@ -9,4 +11,8 @@
   color: #000000;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+
+  @include m.tablet {
+    max-width: 340px;
+  }
 }

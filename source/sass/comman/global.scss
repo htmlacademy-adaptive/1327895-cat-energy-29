@@ -1,3 +1,17 @@
+@use "../mixins/media.scss" as m;
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -15,31 +29,39 @@
 }
 
 .page__body {
+  margin: 0;
+  padding: 0;
   color: #444444;
   font-family: "Lato-Regular", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 18px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .container {
-  width: 280px;
+  max-width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
 
-.heading {
-  color: #000000;
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0;
-  padding: 0;
+  @include m.tablet {
+    max-width: 768px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  @include m.desktop {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

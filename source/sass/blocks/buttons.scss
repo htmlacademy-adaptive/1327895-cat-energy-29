@@ -1,13 +1,16 @@
+@use "../mixins/media.scss" as m;
+
 .button {
   display: block;
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
 
   &--primary {
     background-color: #68b738;

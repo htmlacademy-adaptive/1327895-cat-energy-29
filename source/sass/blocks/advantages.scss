@@ -1,3 +1,5 @@
+@use "../mixins/media.scss" as m;
+
 .advantages {
   padding-top: 20px;
   padding-bottom: 35px;
@@ -11,6 +13,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  row-gap: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 94px 20px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 135px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 95px;
+  }
 }

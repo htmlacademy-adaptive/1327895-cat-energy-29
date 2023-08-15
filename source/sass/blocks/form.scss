@@ -1,3 +1,13 @@
+@use "../mixins/media.scss" as m;
+
+.form__wrapper {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
 .form__group {
   border: none;
   margin: 0;
@@ -8,10 +18,39 @@
   margin-bottom: 35px;
 }
 
+.form__additionally-wrapper {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px 123px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 136px;
+  }
+}
+
 .form__data-item {
   padding: 0;
   margin: 0;
   margin-bottom: 14px;
-  display: flex;
-  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include m.tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.form__purpose-item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
