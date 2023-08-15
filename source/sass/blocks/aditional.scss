@@ -12,8 +12,8 @@
 
 .additional__wrapper {
   @include m.desktop {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 894px 245px;
     gap: 80px;
   }
 }

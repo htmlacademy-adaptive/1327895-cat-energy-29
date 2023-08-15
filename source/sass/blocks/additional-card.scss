@@ -8,13 +8,15 @@
 
   @include m.tablet {
     padding: 17px 38px 28px 38px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px 40px;
   }
 
   @include m.desktop {
-    min-height: 72px;
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 244px;
     align-items: center;
-    justify-content: space-between;
+    gap: 40px;
     padding: 15px 0 17px 0;
   }
 }
@@ -34,20 +36,54 @@
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 0;
+    grid-column: 1 / 2;
   }
 }
 
 .additional-card__description {
+  line-height: 14px;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 15px;
+
+  @include m.tablet {
+    line-height: 20px;
+    margin-bottom: 0;
+    justify-content: flex-end;
+    column-gap: 45px;
+    grid-column: 2 / -2;
+  }
+
+  @include m.desktop {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 40px;
+  }
+}
+
+.additional-card__appellation {
+  @include m.desktop {
+    max-width: 155px;
+  }
+}
+
+.additional-card__value {
+  min-width: 65px;
+  text-align: right;
 }
 
 .additional-card__link {
+  @include m.tablet {
+    grid-column: 1 / -1;
+  }
+
   @include m.desktop {
     padding: 8px 26px;
     width: 244px;
+    grid-column: 3 / 4;
   }
 }
 
