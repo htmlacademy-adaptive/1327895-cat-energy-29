@@ -1,6 +1,10 @@
 @use "../mixins/media.scss" as m;
 
 .form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,6 +16,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 24px;
 }
 
 .form__title {
@@ -35,6 +40,9 @@
   padding: 0;
   margin: 0;
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,4 +61,26 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.form__input {
+  flex-grow: 1;
+  width: calc(50% - 13px);
+}
+
+.form__purpose-label {
+  position: relative;
+}
+
+.form__contacts-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.form__contacts-input {
+  flex-grow: 1;
+  width: calc(50% - 13px);
 }
