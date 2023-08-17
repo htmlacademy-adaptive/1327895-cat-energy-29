@@ -14,6 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 85px;
 }
 
 .main-header__logo {

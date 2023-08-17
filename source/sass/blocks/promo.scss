@@ -12,6 +12,11 @@
 .promo__heading {
   color: #ffffff;
   margin-bottom: 25px;
+
+  // @include m.tablet {
+  //   max-width: 420px;
+  //   color: #000000;
+  // }
 }
 
 .promo__slogan {
@@ -21,6 +26,11 @@
   line-height: 14px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+
+  // @include m.tablet {
+  //   max-width: 420px;
+  //   color: #000000;
+  // }
 }
 
 .promo__link {

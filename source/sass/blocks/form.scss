@@ -21,6 +21,24 @@
 
 .form__title {
   margin-bottom: 35px;
+  text-align: left;
+  display: flex;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    height: 15px;
+    width: calc(50% - 160px);
+    border-bottom: 2px solid  #68b738;
+  }
+
+  &::after {
+    content: "";
+    height: 15px;
+    width: 10px;
+    flex-grow: 1;
+    border-bottom: 2px solid  #68b738;
+  }
 }
 
 .form__additionally-wrapper {
