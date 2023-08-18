@@ -1,11 +1,12 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .form__wrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  @include m.tablet {
+  @include m.desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
@@ -17,6 +18,21 @@
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
+
+  @include m.desktop {
+    margin: 0;
+  }
+
+  &--border {
+    @include m.tablet {
+      padding: 25px 27px;
+      border: 1px solid #e7e7e7;
+    }
+
+    @include m.desktop {
+      padding: 25px 28px;
+    }
+  }
 }
 
 .form__title {
@@ -67,7 +83,7 @@
   }
 
   @include m.tablet {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
@@ -75,6 +91,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 13px;
+  // проверить при PixelPerfect
 
   &:last-child {
     margin-bottom: 0;
@@ -87,7 +104,46 @@
 }
 
 .form__purpose-label {
-  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form__radio-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__radio[type="radio"]:checked ~ .form__radio-mark::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: v.$color-primery;
+  border-radius: 50%;
+
+  @include m.tablet {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.form__purpose-name {
+  padding-left: 20px;
+
+  @include m.tablet {
+    padding-left: 15px;
+  }
 }
 
 .form__contacts-item {

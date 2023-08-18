@@ -1,4 +1,5 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .button {
   display: block;
@@ -13,12 +14,12 @@
   border: none;
 
   &--primary {
-    background-color: #68b738;
+    background-color: v.$color-primery;
     color: #ffffff;
   }
 
   &--secondary {
-    background-color: #f2f2f2;
+    background-color: v.$color-secondary;
     color: #444444;
   }
 }
