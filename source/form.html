@@ -44,11 +44,13 @@
     </div>
   </header>
   <main class="form-main">
-    <section class="ration container">
-      <h1 class="ration__heading heading">Подбор программы</h1>
+    <section class="ration">
+      <div class="ration__wrapper container">
+        <h1 class="ration__heading heading">Подбор программы</h1>
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="ration__selection form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="form__wrapper">
+        <div class="form__wrapper container">
           <fieldset class="form__group">
             <h2 class="visually-hidden">Введите данные вашего кота.</h2>
             <p class="form__data-item">
@@ -69,32 +71,32 @@
             <h2 class="visually-hidden">Укажите цель составления программы.</h2>
             <p class="form__purpose-item">
               <label class="form__purpose-label text-label">
-                <span class="form__radio-mark"></span>
                 <input class="form__radio visually-hidden" type="radio" name="purpose" checked>
+                <span class="form__radio-mark"></span>
                 <span class="form__purpose-name">Похудение</span>
               </label>
             </p>
             <p class="form__purpose-item">
               <label class="form__purpose-label text-label">
-                <span class="form__radio-mark"></span>
                 <input class="form__radio visually-hidden" type="radio" name="purpose">
+                <span class="form__radio-mark"></span>
                 <span class="form__purpose-name">Набор массы</span>
               </label>
             </p>
             <p class="form__purpose-item">
               <label class="form__purpose-label text-label">
-                <span class="form__radio-mark"></span>
                 <input class="form__radio visually-hidden" type="radio" name="purpose">
+                <span class="form__radio-mark"></span>
                 <span class="form__purpose-name">Не знаю (Нужен ваш совет)</span>
               </label>
             </p>
           </fieldset>
         </div>
         <fieldset class="form__group">
-
+          <div class="form__title-decoration">
             <h2 class="form__title title">Контактные данные (владельца кота)</h2>
-
-          <div class="form__wrapper">
+          </div>
+          <div class="form__wrapper container">
             <p class="form__contacts-item">
               <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
               <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
@@ -108,42 +110,44 @@
           </div>
         </fieldset>
         <fieldset class="form__group">
-
+          <div class="form__title-decoration">
             <h2 class="form__title title">Комментарий</h2>
-
-          <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
+          </div>
+          <div class="form__wrapper container">
+            <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
           <textarea class="form__group-additionally input-text" name="behaviour" id="behaviour" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form__group">
-
+          <div class="form__title-decoration">
             <h2 class="form__title title">Дополнительно</h2>
-
-          <div class="form__additionally-wrapper">
+          </div>
+          <div class="form__additionally-wrapper container">
             <p class="form__additionally-item">
               <label class="form__additionally-label">
-                <input class="form__additionally-input" type="checkbox" name="supplements" value="sweetener" checked>
+                <input class="form__additionally-input visually-hidden" type="checkbox" name="supplements" value="sweetener" checked>
                 <span class="form__additionally-mark"></span>
                 <span class="form__additionally-name text-label">Сахарозаменитель</span>
               </label>
             </p>
             <p class="form__additionally-item">
               <label class="form__additionally-label">
-                <input class="form__additionally-input" type="checkbox" name="supplements" value="milk">
+                <input class="form__additionally-input visually-hidden" type="checkbox" name="supplements" value="milk">
                 <span class="form__additionally-mark"></span>
                 <span class="form__additionally-name text-label">Молоко</span>
               </label>
             </p>
             <p class="form__additionally-item">
               <label class="form__additionally-label">
-                <input class="form__additionally-input" type="checkbox" name="supplements" value="water">
+                <input class="form__additionally-input visually-hidden" type="checkbox" name="supplements" value="water">
                 <span class="form__additionally-mark"></span>
                 <span class="form__additionally-name text-label">Питьевая вода</span>
               </label>
             </p>
             <p class="form__additionally-item">
               <label class="form__additionally-label">
-                <input class="form__additionally-input" type="checkbox" name="supplements" value="vitamins">
+                <input class="form__additionally-input visually-hidden" type="checkbox" name="supplements" value="vitamins">
                 <span class="form__additionally-mark"></span>
                 <span class="form__additionally-name text-label">Витамины</span>
               </label>

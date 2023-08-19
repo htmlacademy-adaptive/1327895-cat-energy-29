@@ -1,18 +1,6 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/variables.scss" as v;
 
-.form__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  @include m.desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-  }
-}
-
 .form__group {
   border: none;
   margin: 0;
@@ -35,9 +23,8 @@
   }
 }
 
-.form__title {
+.form__title-decoration {
   margin-bottom: 35px;
-  text-align: left;
   display: flex;
   gap: 20px;
 
@@ -57,7 +44,23 @@
   }
 }
 
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
 .form__additionally-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -66,7 +69,7 @@
 
   @include m.desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 136px;
+    column-gap: 100px;
   }
 }
 
@@ -124,7 +127,7 @@
   }
 }
 
-.form__radio[type="radio"]:checked ~ .form__radio-mark::before {
+.form__radio:checked + .form__radio-mark::before {
   content: "";
   display: block;
   width: 13px;
@@ -138,7 +141,8 @@
   }
 }
 
-.form__purpose-name {
+.form__purpose-name,
+.form__additionally-name {
   padding-left: 20px;
 
   @include m.tablet {
@@ -157,4 +161,39 @@
 .form__contacts-input {
   flex-grow: 1;
   width: calc(50% - 13px);
+}
+
+.form__additionally-item {
+  padding: 0;
+  margin: 0;
+}
+
+.form__additionally-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.form__additionally-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.form__additionally-input:checked + .form__additionally-mark::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 20px;
+  background: url("../img/icons/check.svg") no-repeat;
 }

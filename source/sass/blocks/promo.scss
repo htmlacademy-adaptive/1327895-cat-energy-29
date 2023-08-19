@@ -27,10 +27,10 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
-  // @include m.tablet {
-  //   max-width: 420px;
-  //   color: #000000;
-  // }
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__link {
