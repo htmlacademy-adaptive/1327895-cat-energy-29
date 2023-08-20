@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="./js/main.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header no-js">
     <div class="main-header__wrapper container">
       <a class="main-header__link-image">
         <picture class="main-header__logo">
@@ -22,11 +23,10 @@
       <a class="main-header__logo-text">
         <img class="main-header__link-text" src="./img/logo/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
       </a>
+      <button class="main-header__toggle">
+        <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
+      </button>
       <nav class="main-header__nav main-nav">
-        <button class="main-nav__toggle main-nav__toggle--close">
-          <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
-        </button>
-
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--current">Главная</a>

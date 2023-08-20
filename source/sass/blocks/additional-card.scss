@@ -14,7 +14,7 @@
   }
 
   @include m.desktop {
-    grid-template-columns: 1fr 1fr 244px;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 40px;
     padding: 15px 0 17px 0;
@@ -77,12 +77,12 @@
 
 .additional-card__link {
   @include m.tablet {
+    padding: 7px 220px;
     grid-column: 1 / -1;
   }
 
   @include m.desktop {
     padding: 8px 26px;
-    width: 244px;
     grid-column: 3 / 4;
   }
 }

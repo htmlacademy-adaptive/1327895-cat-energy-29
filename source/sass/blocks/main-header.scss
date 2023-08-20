@@ -27,3 +27,28 @@
     display: none;
   }
 }
+
+.no-js {
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+.main-header__toggle {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &--closed {
+    background-image: url("../img/icons/close.svg");
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+}
