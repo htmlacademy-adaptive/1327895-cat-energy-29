@@ -1,11 +1,11 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/global.scss" as v;
 
-.no-js {
-  .main-nav {
-    display: block;
-  }
-}
+// .no-js {
+//   .main-nav {
+//     display: block;
+//   }
+// }
 
 .main-nav {
   position: absolute;
@@ -42,6 +42,26 @@
   }
 }
 
+.main-nav__item {
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  text-align: center;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include m.tablet {
+    border: none;
+    width: auto;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+
 .main-nav__link {
   display: inline-block;
   color: #000000;
@@ -52,4 +72,15 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @include m.tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+  }
 }

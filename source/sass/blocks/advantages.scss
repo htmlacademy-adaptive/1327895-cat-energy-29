@@ -26,13 +26,17 @@
 
   @include m.desktop {
     grid-template-columns: repeat(4, 1fr);
-    gap: 94px 20px;
+    gap: 94px 77px;
   }
 }
 
 .advantages__item {
   padding-left: 80px;
   position: relative;
+
+  @include m.tablet {
+    padding: 120px 0 20px;
+  }
 
   &::before {
     content: "";
@@ -45,6 +49,12 @@
     background-position: center;
     top: 0;
     left: 0;
+
+    @include m.tablet {
+      width: 80px;
+      height: 80px;
+      top: 20px;
+    }
   }
 
   &--leaf::before {
@@ -62,4 +72,9 @@
   &--time::before {
     background-image: url("../img/icons/clock.svg");
   }
+}
+
+.advantages__text {
+  margin: 0;
+  padding: 0;
 }

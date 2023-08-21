@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="./js/main.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -23,11 +24,10 @@
       <a class="main-header__logo-text" href="index.html">
         <img class="main-header__link-text" src="img/logo/logo-text.svg" alt="Логотип интернет магазина «Кэт энерджи».">
       </a>
+      <button class="main-header__toggle">
+        <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
+      </button>
       <nav class="main-header__nav main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню/Закрыть меню.</span>
-        </button>
-        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -39,7 +39,6 @@
               <a href="form.html" class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
-        </div>
       </nav>
     </div>
   </header>
@@ -219,9 +218,9 @@
         </li>
       </ul>
     </section>
-    <section class="page-catalog__additional additional container">
+    <section class="page-catalog__additional additional">
       <h2 class="additional__heading title">Дополнительные товары</h2>
-      <div class="additional__wrapper">
+      <div class="additional__wrapper container">
         <ul class="additional__list">
           <li class="additional__item additional-card">
             <h3 class="additional-card__name">Сахарозаменитель</h3>
@@ -259,7 +258,7 @@
 
                 <span class="additional-card__appellation">1 упаковка (30 г)</span>
                 <span class="additional-card__value">300 ₽</span>
-              
+
             </div>
             <a class="additional-card__link button button--primary" href="#">Заказать</a>
           </li>

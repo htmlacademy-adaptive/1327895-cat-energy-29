@@ -28,11 +28,29 @@
   display: flex;
   gap: 20px;
 
+  @include m.tablet {
+    gap: 40px;
+    margin-bottom: 54px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 57px;
+  }
+
   &::before {
     content: "";
     height: 15px;
     width: calc(50% - 160px);
     border-bottom: 2px solid  #68b738;
+
+    @include m.tablet {
+      height: 22px;
+      width: calc(50% - 396px);
+    }
+
+    @include m.desktop {
+      width: calc(50% - 652px);
+    }
   }
 
   &::after {
@@ -41,6 +59,18 @@
     width: 10px;
     flex-grow: 1;
     border-bottom: 2px solid  #68b738;
+
+    @include m.tablet {
+      height: 22px;
+    }
+  }
+}
+
+.form__title {
+  max-width: 185px;
+
+  @include m.tablet {
+    max-width: 515px;
   }
 }
 
@@ -161,6 +191,14 @@
 .form__contacts-input {
   flex-grow: 1;
   width: calc(50% - 13px);
+}
+
+.form__additionally {
+  width: 100%;
+}
+
+.form__group-additionally {
+  resize: none;
 }
 
 .form__additionally-item {
