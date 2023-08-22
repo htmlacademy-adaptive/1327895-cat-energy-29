@@ -3,20 +3,29 @@
 .promo {
   color: #ffffff;
   text-align: center;
-  background: linear-gradient(#68b738d9 63%, #ffffff 37%);
+  background: linear-gradient(#68b738d9 302px, #ffffff 302px);
   // background-image: url("/source/img/promo-background.png");
   background-repeat: no-repeat;
   background-position: center;
+
+  @include m.tablet {
+    background: #ffffff;
+  }
+
+  @include m.desktop {
+    background: linear-gradient(to left, #68b738d9 720px, #ffffff 720px);
+  }
 }
 
 .promo__heading {
   color: #ffffff;
   margin-bottom: 25px;
+  text-align: left;
 
-  // @include m.tablet {
-  //   max-width: 420px;
-  //   color: #000000;
-  // }
+  @include m.tablet {
+    max-width: 420px;
+    color: #000000;
+  }
 }
 
 .promo__slogan {
@@ -30,6 +39,8 @@
   @include m.tablet {
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
+    color: #000000;
   }
 }
 
