@@ -83,6 +83,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
+    align-items: center;
   }
 }
 
@@ -193,12 +194,9 @@
   width: calc(50% - 13px);
 }
 
-.form__additionally {
-  width: 100%;
-}
-
 .form__group-additionally {
   resize: none;
+  width: 100%;
 }
 
 .form__additionally-item {
@@ -233,4 +231,8 @@
   width: 26px;
   height: 20px;
   background: url("../img/icons/check.svg") no-repeat;
+}
+
+.form__button {
+  padding: 13px 189px;
 }

@@ -1,8 +1,18 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .example {
   padding-top: 25px;
   padding-bottom: 40px;
+  background: v.$color-secondary;
+
+  @include m.tablet {
+    background: linear-gradient(#ffffff 37%, 37%, v.$color-secondary 63%);
+  }
+
+  @include m.desktop {
+    background: linear-gradient(#ffffff 23%, 23%, v.$color-secondary 77%);
+  }
 }
 
 
@@ -14,6 +24,14 @@
 
 .example__heading {
   margin-bottom: 40px;
+
+  @include m.tablet {
+    margin-bottom: 60px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 146px;
+  }
 }
 
 .exsample__content {
@@ -56,7 +74,7 @@
   line-height: 24px;
 }
 
-.example__costs-characteristic {
+.example__costs {
   color: #000000;
   text-align: center;
   font-family: "Oswald", sans-serif;

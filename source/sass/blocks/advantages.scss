@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  counter-reset: section;
 
   @include m.tablet {
     display: grid;
@@ -33,9 +34,23 @@
 .advantages__item {
   padding-left: 80px;
   position: relative;
+  z-index: 7;
 
   @include m.tablet {
     padding: 120px 0 20px;
+
+    &::after {
+      content: counter(section);
+      counter-increment: section;
+      display: block;
+      position: absolute;
+      font-size: 280px;
+      color: v.$color-secondary;
+      font-family: "Oswald", sans-serif;
+      z-index: -1;
+      top: 100px;
+      right: 0;
+    }
   }
 
   &::before {
