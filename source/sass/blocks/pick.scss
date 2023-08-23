@@ -1,0 +1,73 @@
+.pick__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pick__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.pick--radio:checked + .pick__mark::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: v.$color-primery;
+  border-radius: 50%;
+
+  @include m.tablet {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.pick__name {
+  padding-left: 20px;
+
+  @include m.tablet {
+    padding-left: 15px;
+  }
+}
+
+.form__additionally-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.form__additionally-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__additionally-input:checked + .form__additionally-mark::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 20px;
+  background: url("../img/icons/check.svg") no-repeat;
+}
+
+// удалить повторяющиеся свойтсва и изменить имена классов на общие

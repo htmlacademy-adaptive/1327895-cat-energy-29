@@ -4,4 +4,20 @@
   font-style: normal;
   line-height: 18px;
   text-transform: uppercase;
+  padding: 13px;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+    outline: 1px solid #444444;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: #ff8282;
+    outline: 1px solid #ff8282;
+  }
 }

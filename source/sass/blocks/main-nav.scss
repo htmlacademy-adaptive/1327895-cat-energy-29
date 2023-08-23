@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/global.scss" as v;
+@use "../comman/variables.scss" as v;
 
 // .no-js {
 //   .main-nav {
@@ -82,4 +82,40 @@
   @include m.desktop {
     font-size: 20px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
+.main-nav__link--current {
+  position: relative;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+
+  @include m.tablet {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: v.$color-primery;
+      bottom: 0;
+      display: block;
+    }
+  }
+
+  @include m.desktop {
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+}
+

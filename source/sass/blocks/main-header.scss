@@ -28,6 +28,18 @@
   }
 }
 
+.main-header__link-image {
+  @include m.desktop {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
 // .no-js {
 //   .main-header__toggle {
 //     display: none;

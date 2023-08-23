@@ -73,10 +73,12 @@
 .example__item-characteristic {
   display: inline-block;
   font-size: 12px;
+  line-height: 12px;
   background-color: v.$color-secondary;
   z-index: 2;
   max-width: 77px;
-  padding: 0 2px;
+  text-align: center;
+  padding: 0 9px;
   margin-top: 7px;
   margin-bottom: -16px;
 

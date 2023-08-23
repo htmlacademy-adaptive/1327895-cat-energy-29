@@ -30,7 +30,7 @@
       <nav class="main-header__nav main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -54,7 +54,7 @@
             <h2 class="visually-hidden">Введите данные вашего кота.</h2>
             <p class="form__data-item">
               <label class="form__data-label text-label" for="name">Имя:*</label>
-              <input class="form__input input-text" id="name" type="text" placeholder="Барсик">
+              <input class="form__input input-text" id="name" type="text" placeholder="Барсик"  required>
             </p>
             <p class="form__data-item">
               <label class="form__data-label text-label" for="weight">Вес (кг):*</label>
@@ -68,21 +68,21 @@
           </fieldset>
           <fieldset class="form__group form__group--border">
             <h2 class="visually-hidden">Укажите цель составления программы.</h2>
-            <p class="form__purpose-item">
-              <label class="form__purpose-label text-label">
-                <input class="form__radio visually-hidden" type="radio" name="purpose" checked>
-                <span class="form__radio-mark"></span>
-                <span class="form__purpose-name">Похудение</span>
+            <p class="form__purpose-item pick">
+              <label class="pick__label text-label">
+                <input class="pick__input visually-hidden" type="radio" name="purpose" checked>
+                <span class="pick__mark"></span>
+                <span class="pick__name">Похудение</span>
               </label>
             </p>
-            <p class="form__purpose-item">
-              <label class="form__purpose-label text-label">
-                <input class="form__radio visually-hidden" type="radio" name="purpose">
-                <span class="form__radio-mark"></span>
-                <span class="form__purpose-name">Набор массы</span>
+            <p class="form__purpose-item pick">
+              <label class="pick__label text-label">
+                <input class="pick__input pick--radio" type="radio" name="purpose">
+                <span class="pick__mark"></span>
+                <span class="pick__name">Набор массы</span>
               </label>
             </p>
-            <p class="form__purpose-item">
+            <p class="form__purpose-item ">
               <label class="form__purpose-label text-label">
                 <input class="form__radio visually-hidden" type="radio" name="purpose">
                 <span class="form__radio-mark"></span>
