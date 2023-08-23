@@ -39,14 +39,6 @@
   }
 }
 
-.pick__name {
-  padding-left: 20px;
-
-  @include m.tablet {
-    padding-left: 15px;
-  }
-}
-
 .pick__input:checked + .pick__mark--checkbox::before {
   content: "";
   position: absolute;
@@ -56,3 +48,21 @@
   background: url("../img/icons/check.svg") no-repeat;
 }
 
+.pick__name {
+  padding-left: 20px;
+
+  @include m.tablet {
+    padding-left: 15px;
+  }
+}
+
+.pick__input:hover ~ .pick__mark {
+  border-color: #bababa;
+}
+
+.pick__input:disabled + .pick__mark,
+.pick__input:disabled ~ .pick__name,
+.pick__input:disabled ~ .pick__label {
+  opacity: 0.3;
+  cursor: default;
+}
