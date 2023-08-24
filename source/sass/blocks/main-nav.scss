@@ -1,11 +1,11 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/variables.scss" as v;
 
-// .no-js {
-//   .main-nav {
-//     display: block;
-//   }
-// }
+.no-js {
+  .main-nav {
+    display: block;
+  }
+}
 
 .main-nav {
   position: absolute;
@@ -62,7 +62,7 @@
 }
 
 .main-nav__link {
-  display: inline-block;
+  display: block;
   color: #000000;
   font-family: "Oswald", sans-serif;
   font-size: 20px;

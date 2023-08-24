@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="./js/main.js" defer></script>
 </head>
 
-<body class="page__body">
+<body class="page__body  no-js">
   <header class="main-header">
     <div class="main-header__wrapper container">
       <a class="main-header__link-image" href="index.html">
@@ -219,7 +223,11 @@
       </ul>
     </section>
     <section class="page-catalog__additional additional">
-      <h2 class="additional__heading title">Дополнительные товары</h2>
+      <div class="additional__title-wrapper decoration-line">
+        <h2 class="decoration-line__title title">
+          <span class="title__text">Дополнительные товары</span>
+        </h2>
+      </div>
       <div class="additional__wrapper container">
         <ul class="additional__list">
           <li class="additional__item additional-card">

@@ -12,10 +12,23 @@
 
 .main-header__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   min-height: 85px;
+
+  @include m.tablet {
+    justify-content: space-between;
+  }
+}
+
+.no-js .main-header__wrapper {
+  justify-content: flex-start;
+  gap: 56px;
+
+  @include m.tablet {
+    justify-content: space-between;
+    gap: 36px;
+  }
 }
 
 .main-header__logo {
@@ -40,11 +53,11 @@
   }
 }
 
-// .no-js {
-//   .main-header__toggle {
-//     display: none;
-//   }
-// }
+.no-js {
+  .main-header__toggle {
+    display: none;
+  }
+}
 
 .main-header__toggle {
   display: flex;

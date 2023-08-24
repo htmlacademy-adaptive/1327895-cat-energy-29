@@ -26,14 +26,6 @@
   flex-grow: 1;
 }
 
-.additional__item {
-  border-top: 1px solid #cdcdcd;
-
-  &:last-child {
-    border-bottom: 1px solid #cdcdcd;
-  }
-}
-
 .additional__present {
   @include m.desktop {
     width: 245px;
