@@ -55,6 +55,18 @@
   margin-bottom: 20px;
 }
 
+.example__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
 .example__item {
   display: flex;
   flex-direction: column-reverse;
@@ -68,6 +80,22 @@
     min-width: 162px;
   }
 }
+
+.example__costs {
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  box-shadow: none;
+  text-align: center;
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 
 .example__item-characteristic {
   display: inline-block;
@@ -100,10 +128,4 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-}
-
-.example__costs {
-  color: #000000;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
 }
