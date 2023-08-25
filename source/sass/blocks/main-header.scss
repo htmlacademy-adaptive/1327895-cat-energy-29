@@ -15,10 +15,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 85px;
-
-  @include m.tablet {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 
 .no-js .main-header__wrapper {
@@ -29,10 +26,6 @@
     justify-content: space-between;
     gap: 36px;
   }
-}
-
-.main-header__logo {
-  display: block;
 }
 
 .main-header__link-text {
