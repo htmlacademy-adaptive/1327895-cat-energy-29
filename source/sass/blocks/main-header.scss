@@ -1,6 +1,9 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .main-header {
+  position: relative;
+
   @include m.tablet {
     padding-top: 25px;
   }
@@ -9,6 +12,7 @@
     padding-top: 56px;
   }
 }
+
 
 .main-header__wrapper {
   display: flex;
