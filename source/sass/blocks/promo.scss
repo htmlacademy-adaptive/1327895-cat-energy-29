@@ -29,11 +29,12 @@
 
   @include m.desktop {
     min-height: 720px;
+    position: static;
 
     &::after {
       content: "";
       display: block;
-      background-image: linear-gradient(90deg, #68b738d9 710px, #68b738d9), url("../img/promo-background-desktop.jpg");
+      background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/promo-background-desktop.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: right;

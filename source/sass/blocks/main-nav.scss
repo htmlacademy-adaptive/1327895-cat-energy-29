@@ -40,6 +40,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 33px;
+    background-color: transparent;
   }
 }
 
@@ -96,11 +97,6 @@
 .main-nav__link--current {
   position: relative;
 
-  &:hover,
-  &:active {
-    opacity: 1;
-  }
-
   @include m.tablet {
     &::after {
       position: absolute;
@@ -115,8 +111,22 @@
 
   @include m.desktop {
     &::after {
+      background-color: v.$color-primery;
+    }
+  }
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.main-nav__link--index {
+  @include m.desktop {
+    color: #ffffff;
+
+    &::after {
       background-color: #ffffff;
     }
   }
 }
-

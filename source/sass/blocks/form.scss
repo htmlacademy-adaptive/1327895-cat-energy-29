@@ -107,7 +107,7 @@
       background-image: url("../img/icons/email-icon-focus.svg");
     }
 
-    &:not(:placeholder-shown):invalid {
+    &:invalid:not(:placeholder-shown) {
       background-image: url("../img/icons/email-icon-error.svg");
     }
   }
@@ -116,14 +116,14 @@
     background-image: url("../img/icons/phone-icon.svg");
     background-repeat: no-repeat;
     background-position: center right 16px;
-  }
 
-  &:focus {
-    background-image: url("../img/icons/phone-icon-focus.svg");
-  }
+    &:focus {
+      background-image: url("../img/icons/phone-icon-focus.svg");
+    }
 
-  &:not(:placeholder-shown):invalid {
-    background-image: url("../img/icons/phone-icon-error.svg");
+    &:invalid:not(:placeholder-shown) {
+      background-image: url("../img/icons/phone-icon-error.svg");
+    }
   }
 }
 

@@ -96,18 +96,3 @@
   }
 }
 
-.additional__present {
-  background-color: #68b738;
-  text-align: center;
-}
-
-.additional__present-link {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 16px;
-  text-decoration: none;
-
-  @include m.tablet {
-    max-width: 245px;
-  }
-}
