@@ -53,7 +53,7 @@
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
       <form class="ration__selection form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="form__wrapper container">
+        <div class="form__wrapper form__wrapper--whom container">
           <fieldset class="form__group">
             <h2 class="visually-hidden">Введите данные вашего кота.</h2>
             <p class="form__data-item">
@@ -101,7 +101,7 @@
               <span class="title__text">Контактные данные (владельца кота)</span>
             </h2>
           </div>
-          <div class="form__wrapper container">
+          <div class="form__wrapper form__wrapper--contacts container">
             <p class="form__contacts-item">
               <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
               <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
@@ -119,9 +119,9 @@
             <h2 class="decoration-line__title title">
               <span class="title__text">Комментарий</span></h2>
           </div>
-          <div class="form__additionally container">
+          <div class="form__comment container">
             <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
-          <textarea class="form__group-additionally input-text" name="behaviour" id="behaviour" cols="30" rows="10"
+          <textarea class="form__group-comment input-text" name="behaviour" id="behaviour" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
@@ -131,7 +131,7 @@
               <span class="title__text">Дополнительно</span>
             </h2>
           </div>
-          <div class="form__additionally-wrapper container">
+          <div class="form__additionally container">
             <p class="form__additionally-item pick">
               <label class="pick__label">
                 <input class="pick__input visually-hidden" type="checkbox" name="supplements" value="sweetener" checked>
@@ -170,11 +170,17 @@
     </section>
     <section class="address">
       <h2 class="visually-hidden">Наш адресс.</h2>
-      <div class="address__wrapper">
-        <p class="address__title">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="address__wrapper container">
+        <div class="address__info">
+          <p class="address__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
       </div>
-      <img class="address__map" src="img/map-mobile.jpg" width="320" height="362" alt="Карта.">
+      <picture>
+        <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
+        <img class="address__map" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+      </picture>
     </section>
   </main>
   <footer class="footer">
