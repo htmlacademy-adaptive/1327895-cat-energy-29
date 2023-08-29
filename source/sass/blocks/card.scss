@@ -1,18 +1,50 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .card {
   padding-top: 19px;
   padding-bottom: 14px;
+  border-top: 2px solid v.$color-secondary;
+  border-bottom: 2px solid v.$color-secondary;
+
 
   @include m.tablet {
-    background-color: #f2f2f2;
+    background-color: v.$color-secondary;
     padding: 8px 37px 39px 39px;
+    border: 2px solid transparent;
   }
 
   @include m.desktop {
     padding: 0 38px 40px 39px;
   }
 }
+
+.card--more {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icons/more-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include m.tablet {
+    border: 2px solid v.$color-secondary;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+  }
+}
+
 
 .card__product-name {
   text-decoration: none;

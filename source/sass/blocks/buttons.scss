@@ -1,4 +1,5 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .button {
   display: block;
@@ -11,14 +12,32 @@
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  cursor: pointer;
+}
 
-  &--primary {
-    background-color: #68b738;
-    color: #ffffff;
+.button--primary {
+  background-color: v.$color-primery;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
   }
 
-  &--secondary {
-    background-color: #f2f2f2;
-    color: #444444;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--secondary {
+  background-color: v.$color-secondary;
+  color: #444444;
+
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
   }
 }

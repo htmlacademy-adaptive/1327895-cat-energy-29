@@ -1,6 +1,9 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .main-header {
+  position: relative;
+
   @include m.tablet {
     padding-top: 25px;
   }
@@ -10,17 +13,63 @@
   }
 }
 
+
 .main-header__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 85px;
+  justify-content: space-between;
 }
 
-.main-header__logo {
-  display: block;
+.no-js .main-header__wrapper {
+  justify-content: flex-start;
+  gap: 56px;
+
+  @include m.tablet {
+    justify-content: space-between;
+    gap: 36px;
+  }
 }
 
 .main-header__link-text {
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.main-header__link-image {
+  @include m.desktop {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.no-js {
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+.main-header__toggle {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/menu.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &--closed {
+    background-image: url("../img/icons/close.svg");
+  }
+
   @include m.tablet {
     display: none;
   }

@@ -1,0 +1,46 @@
+@use "../mixins/media.scss" as m;
+
+.decoration-line {
+  display: flex;
+  gap: 20px;
+
+  @include m.tablet {
+    gap: 40px;
+  }
+
+  &::before {
+    content: "";
+    height: 15px;
+    width: calc(50% - 160px);
+    border-bottom: 2px solid  #68b738;
+
+    @include m.tablet {
+      height: 22px;
+      width: calc(50% - 396px);
+    }
+
+    @include m.desktop {
+      width: calc(50% - 652px);
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 15px;
+    width: 10px;
+    flex-grow: 1;
+    border-bottom: 2px solid  #68b738;
+
+    @include m.tablet {
+      height: 22px;
+    }
+  }
+}
+
+.decoration-line__title {
+  max-width: 185px;
+
+  @include m.tablet {
+    max-width: 515px;
+  }
+}

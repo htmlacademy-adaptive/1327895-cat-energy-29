@@ -1,13 +1,31 @@
 @use "../mixins/media.scss" as m;
 
+.ration {
+  padding-top: 27px;
+  padding-bottom: 32px;
+
+  @include m.tablet {
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
+
+  @include m.desktop {
+    padding-top: 74px;
+    padding-bottom: 82px;
+  }
+}
+
 .ration__heading {
   margin-bottom: 37px;
+
+  @include m.tablet {
+    margin-bottom: 54px;
+  }
 }
 
 .ration__subheading {
   margin: 0;
   padding: 0;
-  margin-bottom: 39px;
   color: #000000;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;

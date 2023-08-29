@@ -1,30 +1,70 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
-.main-nav {
-  position: relative;
+.no-js {
+  .main-nav {
+    display: block;
+  }
 }
 
-.main-nav__toggle {
+.main-nav {
+  position: absolute;
+  z-index: 10;
+  top: 84px;
+  left: 0;
+  width: 100%;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+
   @include m.tablet {
-    display: none;
+    position: static;
+    display: block;
+    width: auto;
   }
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
+  background-color: #ffffff;
 
   @include m.tablet {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 33px;
+    background-color: transparent;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  text-align: center;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include m.tablet {
+    border: none;
+    width: auto;
+
+    &:last-child {
+      border: none;
+    }
   }
 }
 
 .main-nav__link {
-  display: inline-block;
+  display: block;
   color: #000000;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -33,4 +73,60 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @include m.tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__link--current {
+  position: relative;
+
+  @include m.tablet {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: v.$color-primery;
+      bottom: 0;
+      display: block;
+    }
+  }
+
+  @include m.desktop {
+    &::after {
+      background-color: v.$color-primery;
+    }
+  }
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.main-nav__link--index {
+  @include m.desktop {
+    color: #ffffff;
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
 }

@@ -1,33 +1,108 @@
 @use "../mixins/media.scss" as m;
-
-.form__wrapper {
-  @include m.tablet {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-  }
-}
+@use "../comman/variables.scss" as v;
 
 .form__group {
   border: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 24px;
+
+  @include m.desktop {
+    margin: 0;
+  }
+
+  &--border {
+    @include m.tablet {
+      padding: 25px 27px;
+      border: 1px solid #e7e7e7;
+    }
+
+    @include m.desktop {
+      padding: 25px 28px;
+    }
+  }
 }
 
-.form__title {
-  margin-bottom: 35px;
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include m.tablet {
+    gap: 72px;
+  }
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    align-items: center;
+  }
+
+  &--whom {
+    padding-top: 37px;
+    padding-bottom: 26px;
+
+    @include m.tablet {
+      padding-top: 54px;
+      padding-bottom: 75px;
+    }
+
+    @include m.desktop {
+      padding-top: 56px;
+      padding-bottom: 69px;
+    }
+  }
+
+  &--contacts {
+    padding-top: 26px;
+    padding-bottom: 24px;
+
+    @include m.tablet {
+      padding-top: 76px;
+      padding-bottom: 65px;
+    }
+
+    @include m.desktop {
+      padding-bottom: 67px;
+    }
+  }
 }
 
-.form__additionally-wrapper {
+.form__comment {
+  padding-top: 38px;
+  padding-bottom: 23px;
+
+  @include m.tablet {
+    padding-top: 87px;
+    padding-bottom: 53px;
+  }
+
+  @include m.desktop {
+    padding-top: 76px;
+    padding-bottom: 67px;
+  }
+}
+
+.form__additionally {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 36px;
+  padding-bottom: 34px;
+
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 42px 123px;
+    padding-top: 57px;
+    padding-bottom: 54px;
   }
 
   @include m.desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 136px;
+    column-gap: 100px;
+    padding-bottom: 61px;
   }
 }
 
@@ -35,13 +110,16 @@
   padding: 0;
   margin: 0;
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @include m.tablet {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
@@ -49,8 +127,69 @@
   margin: 0;
   padding: 0;
   margin-bottom: 13px;
+  // проверить при PixelPerfect
 
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.form__input {
+  flex-grow: 1;
+  width: calc(50% - 13px);
+}
+
+.form__contacts-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.form__contacts-input {
+  flex-grow: 1;
+  width: calc(50% - 13px);
+
+  &--mail {
+    background-image: url("../img/icons/email-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 16px;
+
+    &:focus {
+      background-image: url("../img/icons/email-icon-focus.svg");
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      background-image: url("../img/icons/email-icon-error.svg");
+    }
+  }
+
+  &--tel {
+    background-image: url("../img/icons/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 16px;
+
+    &:focus {
+      background-image: url("../img/icons/phone-icon-focus.svg");
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      background-image: url("../img/icons/phone-icon-error.svg");
+    }
+  }
+}
+
+.form__group-comment {
+  resize: none;
+  width: 100%;
+}
+
+.form__additionally-item {
+  padding: 0;
+  margin: 0;
+}
+
+.form__button {
+  padding: 13px 10px;
 }

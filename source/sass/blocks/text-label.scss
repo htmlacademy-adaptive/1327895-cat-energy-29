@@ -1,7 +1,14 @@
+@use "../mixins/media.scss" as m;
+
 .text-label {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   line-height: 18px;
   text-transform: uppercase;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

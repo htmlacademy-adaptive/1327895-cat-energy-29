@@ -1,4 +1,5 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .advantages {
   padding-top: 20px;
@@ -15,7 +16,8 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 94px 20px;
+  gap: 20px;
+  counter-reset: section;
 
   @include m.tablet {
     display: grid;
@@ -25,6 +27,69 @@
 
   @include m.desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 95px;
+    gap: 94px 77px;
   }
+}
+
+.advantages__item {
+  padding-left: 80px;
+  position: relative;
+  z-index: 7;
+
+  @include m.tablet {
+    padding: 120px 0 20px;
+
+    &::after {
+      content: counter(section);
+      counter-increment: section;
+      display: block;
+      position: absolute;
+      font-size: 280px;
+      color: v.$color-secondary;
+      font-family: "Oswald", sans-serif;
+      z-index: -1;
+      top: 100px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: v.$color-primery;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+
+    @include m.tablet {
+      width: 80px;
+      height: 80px;
+      top: 20px;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icons/leaf.svg");
+  }
+
+  &--glass::before {
+    background-image: url("../img/icons/glass.svg");
+  }
+
+  &--cutlery::before {
+    background-image: url("../img/icons/cutlery.svg");
+  }
+
+  &--time::before {
+    background-image: url("../img/icons/clock.svg");
+  }
+}
+
+.advantages__text {
+  margin: 0;
+  padding: 0;
 }
