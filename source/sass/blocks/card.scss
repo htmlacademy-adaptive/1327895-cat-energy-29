@@ -5,8 +5,10 @@
   padding-top: 19px;
   padding-bottom: 14px;
   border-top: 2px solid v.$color-secondary;
-  border-bottom: 2px solid v.$color-secondary;
 
+  &:last-child {
+    border-bottom: 2px solid v.$color-secondary;
+  }
 
   @include m.tablet {
     background-color: v.$color-secondary;
@@ -15,7 +17,7 @@
   }
 
   @include m.desktop {
-    padding: 0 38px 40px 39px;
+    padding: 0 38px 40px;
   }
 }
 
@@ -24,30 +26,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding-top: 25px;
 
-  &::before {
+  @include m.tablet {
+    padding-top: 52px;
+    border: 2px solid v.$color-secondary;
+  }
+}
+
+
+.card__product-link {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--more::before {
+    margin-bottom: 34px;
     content: "";
     display: block;
     width: 30px;
     height: 30px;
     background-image: url("../img/icons/more-icon.svg");
     background-repeat: no-repeat;
-  }
 
-  @include m.tablet {
-    border: 2px solid v.$color-secondary;
-
-    &::before {
+    @include m.tablet {
       width: 60px;
       height: 60px;
-      background-size: cover;
+      background-image: url("../img/icons/more-icon-big.svg");
     }
   }
-}
-
-
-.card__product-name {
-  text-decoration: none;
 }
 
 .card__title {
@@ -60,12 +79,6 @@
   text-transform: uppercase;
   line-height: 20px;
   color: #222222;
-
-  &--more {
-    text-align: center;
-    color: #111111;
-    margin-bottom: 8px;
-  }
 
   @include m.tablet {
     font-size: 20px;
@@ -99,13 +112,5 @@
 
 .card__button {
   text-align: center;
-  padding: 10px 110px;
-
-  @include m.tablet {
-    padding: 10px 93px;
-  }
-
-  @include m.desktop {
-    padding: 10px 53px;
-  }
+  padding: 10px;
 }

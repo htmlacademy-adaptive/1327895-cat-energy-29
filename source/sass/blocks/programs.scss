@@ -143,6 +143,7 @@
 
   @include m.tablet {
     max-width: 340px;
+    border: none;
   }
 
   @include m.desktop {

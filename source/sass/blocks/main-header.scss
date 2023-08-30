@@ -3,9 +3,11 @@
 
 .main-header {
   position: relative;
+  border-bottom: 1px solid v.$color-secondary;
 
   @include m.tablet {
     padding-top: 25px;
+    border: none;
   }
 
   @include m.desktop {

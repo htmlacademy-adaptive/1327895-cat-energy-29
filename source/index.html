@@ -10,6 +10,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="./js/main.js" defer></script>
 </head>
 
@@ -146,12 +148,12 @@
           <p class="address__title">Приглашаем к сотрудничеству дилеров!</p>
           <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-
       </div>
+      <div class="address__map" id="map"></div>
       <picture>
         <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
         <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+        <img class="address__map-image" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>
@@ -163,7 +165,11 @@
       <ul class="footer__socials">
         <li class="footer__socials-item">
           <a class="footer__social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в контакте</span>
+            <span class="visually-hidden">
+              <svg class="footer__vk" width="28" height="22">
+                <use xlink:href="img/vk.svg#vk-icon"></use>
+              </svg>
+            </span>
             <!-- иконка в контакте -->
           </a>
         </li>
