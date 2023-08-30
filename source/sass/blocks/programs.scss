@@ -151,10 +151,10 @@
 }
 
 .programs__link {
-  display: inline-block;
-  padding-top: 15px;
+  display: block;
+  margin-top: 15px;
   color: #000000;
-  text-align: center;
+  text-align: left;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -162,4 +162,51 @@
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  min-width: 90px;
+
+  &::after {
+    content: "";
+    border-width: 12px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-color: transparent;
+    border-left-color: #000000;
+    border-style: solid;
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    left: 140px;
+    transform: translateY(50%);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+    top: 50%;
+    left: 122px;
+    transition: width 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 26px;
+    }
+
+    &::after {
+      transform: translate(7px, 50%);
+      transition: 0.3s;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
