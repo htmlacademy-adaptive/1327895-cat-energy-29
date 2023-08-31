@@ -11,6 +11,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="./js/main.js" defer></script>
 </head>
 
@@ -176,42 +178,51 @@
           <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </div>
+      <div class="address__map" id="map"></div>
       <picture>
         <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
         <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+        <img class="address__map-image" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper  container">
       <a class="footer__logo-link" href="#">
         <img class="footer__logo" src="img/logo/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
       </a>
       <ul class="footer__socials">
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в контакте</span>
-            <!-- иконка в контакте -->
+          <a class="footer__link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Контакте.</span>
+            <svg class="footer__icon" width="28" height="22">
+              <use xlink:href="img/sprite.svg#vk-icon"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="ttps://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Мы на Ютуб</span>
-            <!-- иконка ютуба -->
+          <a class="footer__link" href="ttps://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы на Ютуб.</span>
+            <svg class="footer__icon" width="24" height="19">
+              <use xlink:href="img/sprite.svg#youtub-icon"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Мы в телеграмм</span>
-            <!--иконка телеграмм -->
+          <a class="footer__link" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в телеграмм.</span>
+            <svg class="footer__icon" width="20" height="18">
+              <use xlink:href="img/sprite.svg#tg-icon"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="footer__developer">
         <a class="footer__developer-link" href="https://htmlacademy.ru/">HTML Academy</a>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/">
-          <!-- иконка логотипа сайта-разработчика -->
+        <a class="footer__link" href="https://htmlacademy.ru/">
+          <svg class="footer__icon" width="27" height="34">
+            <use xlink:href="img/sprite.svg#html-icon"></use>
+          </svg>
         </a>
       </div>
     </div>

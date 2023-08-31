@@ -1,8 +1,106 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include m.tablet {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
 }
 
-.footer__vk {
-  fill: red;
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 1fr 135px 1fr;
+    column-gap: 100px;
+  }
+}
+
+.footer__logo-link {
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @include m.tablet {
+    text-align: left;
+    border: none;
+    padding: 0;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  max-width: 135px;
+  gap: 26px;
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include m.tablet {
+    padding: 0;
+  }
+}
+
+.footer__icon {
+  fill: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__developer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    justify-content: flex-end;
+    column-gap: 23px;
+    border: none;
+    padding: 0;
+  }
+}
+
+.footer__developer-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Lato-Regular", sans-serif;
+  color: #444444;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: v.$color-primery; // Узнать про ошибку в Стайлгайде
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__link:hover .footer__icon,
+.footer__link:active .footer__icon {
+  fill: v.$color-primery;
+}
+
+.footer__link:active .footer__icon {
+  opacity: 0.3;
 }
