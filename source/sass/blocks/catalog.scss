@@ -2,6 +2,12 @@
 
 .catalog__heading {
   margin-bottom: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include m.tablet {
+    padding: 0;
+  }
 }
 
 .catalog__list {

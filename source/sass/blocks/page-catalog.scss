@@ -1,4 +1,21 @@
+@use "../mixins/media.scss" as m;
+
 .page-catalog__assortment {
   padding-top: 25px;
   padding-bottom: 25px;
+  max-width: initial;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include m.tablet {
+    max-width: 768px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  @include m.desktop {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

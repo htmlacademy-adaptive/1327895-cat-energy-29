@@ -2,8 +2,7 @@
 @use "../comman/variables.scss" as v;
 
 .card {
-  padding-top: 19px;
-  padding-bottom: 14px;
+  padding: 19px 20px 14px 20px;
   border-top: 2px solid v.$color-secondary;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -41,6 +40,18 @@
 
 .card__link-image {
   display: block;
+  width: 140px;
+  height: 112px;
+
+  @include m.tablet {
+    width: 168px;
+    height: 200px;
+  }
+
+  @include m.desktop {
+    width: 172px;
+    height: 196px;
+  }
 }
 
 .card__product-link {
@@ -59,17 +70,17 @@
   &--more {
     text-align: center;
     width: 100%;
+    display: block;
   }
 
   &--more::before {
     margin-bottom: 34px;
     content: "";
-    display: block;
+    display: inline-block;
     width: 30px;
     height: 30px;
     background-image: url("../img/icons/more-icon.svg");
     background-repeat: no-repeat;
-    text-align: center;
 
     @include m.tablet {
       width: 60px;
@@ -95,6 +106,10 @@
     font-size: 20px;
     line-height: 24px;
     max-width: 180px;
+  }
+
+  &--more {
+    max-width: 220px;
   }
 }
 

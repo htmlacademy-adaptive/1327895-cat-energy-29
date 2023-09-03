@@ -6,6 +6,12 @@
   position: relative;
 }
 
+.address__wrapper {
+  @include m.desktop {
+    position: relative;
+  }
+}
+
 .address__info {
   display: flex;
   flex-wrap: wrap;
