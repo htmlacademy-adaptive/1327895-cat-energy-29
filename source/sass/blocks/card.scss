@@ -2,7 +2,7 @@
 @use "../comman/variables.scss" as v;
 
 .card {
-  padding: 19px 20px 14px 20px;
+  padding: 19px 20px 25px 20px;
   border-top: 2px solid v.$color-secondary;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -12,11 +12,11 @@
   }
 
   @include m.tablet {
-    background-color: v.$color-secondary;
     padding: 8px 37px 39px 39px;
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, #ffffff 81px, v.$color-secondary 81px);
   }
 
   @include m.desktop {
@@ -57,6 +57,10 @@
 .card__product-link {
   text-decoration: none;
   text-align: left;
+
+  @include m.tablet {
+    text-align: center;
+  }
 
   &:hover,
   &:focus {
@@ -105,11 +109,15 @@
   @include m.tablet {
     font-size: 20px;
     line-height: 24px;
-    max-width: 180px;
+    max-width: 164px;
   }
 
   &--more {
-    max-width: 220px;
+    max-width: 100%;
+
+    @include m.tablet {
+      max-width: 175px;
+    }
   }
 }
 
@@ -127,6 +135,7 @@
 
   @include m.tablet {
     font-size: 16px;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -135,6 +144,10 @@
   padding: 0;
   margin-bottom: 21px;
   text-align: center;
+
+  @include m.tablet {
+    max-width: 180px;
+  }
 }
 
 .card__button {

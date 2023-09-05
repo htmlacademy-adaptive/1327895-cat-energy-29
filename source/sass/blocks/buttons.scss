@@ -13,13 +13,15 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .button--primary {
   background-color: v.$color-primery;
   color: #ffffff;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #5eaa2f;
   }
 
@@ -33,7 +35,8 @@
   color: #444444;
 
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #ebebeb;
   }
 

@@ -5,17 +5,17 @@
   padding-bottom: 35px;
 }
 
-.additional__heading {
-  margin-bottom: 36px;
-  line-height: 24px;
-}
-
 .additional__wrapper {
+  padding-top: 36px;
+
+  @include m.tablet {
+    padding-top: 81px;
+  }
+
   @include m.desktop {
     display: grid;
     grid-template-columns: 894px 245px;
     gap: 80px;
-    padding-top: 81px;
   }
 }
 

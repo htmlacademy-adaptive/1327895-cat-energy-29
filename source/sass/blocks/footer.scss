@@ -96,8 +96,12 @@
   }
 }
 
+.footer__link:focus {
+  outline: none;
+}
+
 .footer__link:hover .footer__icon,
-.footer__link:active .footer__icon {
+.footer__link:focus .footer__icon {
   fill: v.$color-primery;
 }
 
