@@ -4,9 +4,11 @@
 .main-header {
   position: relative;
   border-bottom: 1px solid v.$color-secondary;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   @include m.tablet {
-    padding-top: 25px;
+    padding-top: 10px;
     border: none;
   }
 
@@ -18,15 +20,11 @@
 
 .main-header__wrapper {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 85px;
-  justify-content: space-between;
-}
-
-.no-js .main-header__wrapper {
   justify-content: flex-start;
+  align-items: center;
   gap: 56px;
+  flex-wrap: wrap;
+  min-height: 53px;
 
   @include m.tablet {
     justify-content: space-between;

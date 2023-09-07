@@ -10,7 +10,7 @@
 .main-nav {
   position: absolute;
   z-index: 10;
-  top: 84px;
+  top: 68px;
   left: 0;
   width: 100%;
   display: none;
@@ -39,8 +39,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 33px;
+    gap: 37px;
     background-color: transparent;
+  }
+
+  @include m.desktop {
+    gap: 34px;
   }
 }
 
@@ -79,13 +83,17 @@
   @include m.tablet {
     font-size: 18px;
     line-height: 24px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 
   @include m.desktop {
     font-size: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     opacity: 0.6;
   }
 

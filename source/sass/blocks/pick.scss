@@ -56,7 +56,8 @@
   }
 }
 
-.pick__input:hover ~ .pick__mark {
+.pick__input:hover ~ .pick__mark,
+.pick__input:focus ~ .pick__mark {
   border-color: #bababa;
 }
 

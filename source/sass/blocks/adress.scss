@@ -25,7 +25,7 @@
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 60px 78px 60px 80px;
+    padding: 62px 65px 60px 80px;
     z-index: 2;
   }
 }
@@ -62,6 +62,13 @@
 
   @include m.desktop {
     text-align: left;
+  }
+}
+
+.address__text-city {
+  @include m.tablet {
+    display: inline-block;
+    margin-top: 17px;
   }
 }
 

@@ -28,7 +28,6 @@
   }
 
   @include m.desktop {
-    min-height: 720px;
     position: static;
 
     &::after {
@@ -39,7 +38,7 @@
       background-repeat: no-repeat;
       background-position: right;
       width: 50%;
-      height: 720px;
+      height: 694px;
       top: 0;
       right: 0;
       left: auto;
@@ -56,12 +55,20 @@
   }
 
   @include m.desktop {
-    min-height: 694px;
+    min-height: 605px;
   }
 }
 
 .promo__content {
-  max-width: 430px;
+  @include m.tablet {
+    max-width: 515px;
+    padding: 45px 0 49px 90px;
+  }
+
+  @include m.desktop {
+    max-width: 550px;
+    padding: 96px 0 50px 79px;
+  }
 }
 
 .promo__heading {
@@ -73,6 +80,7 @@
     max-width: 420px;
     color: #000000;
     text-align: left;
+    margin-bottom: 40px;
   }
 }
 
@@ -100,8 +108,13 @@
     margin: auto;
     right: 0;
     left: 0;
-    top: 180px;
+    top: 245px;
     z-index: -1;
+  }
+
+  @include m.desktop {
+    left: 227px;
+    top: 15px;
   }
 }
 
@@ -109,8 +122,13 @@
   padding: 7px 44px;
 
   @include m.tablet {
-    width: 224px;
-    padding: 14px 26px;
+    width: 245px;
+    padding: 16px 26px;
     margin-top: 50px;
+  }
+
+  @include m.desktop {
+    padding: 14px 26px;
+    margin-top: 52px;
   }
 }

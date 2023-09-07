@@ -6,6 +6,10 @@
     padding-top: 66px;
     padding-bottom: 66px;
   }
+
+  @include m.desktop {
+    padding-top: 71px;
+  }
 }
 
 .footer__wrapper {
@@ -26,7 +30,7 @@
   display: block;
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 14px;
 
   @include m.tablet {
     text-align: left;
@@ -43,7 +47,7 @@
   margin: 0;
   padding: 0;
   max-width: 135px;
-  gap: 26px;
+  gap: 27px;
   list-style: none;
   padding-top: 20px;
   padding-bottom: 20px;

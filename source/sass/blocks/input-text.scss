@@ -6,6 +6,12 @@
   text-transform: uppercase;
   padding: 13px;
   border: 1px solid #e7e7e7;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 
   &:hover:not(:disabled) {
     border-color: #cdcdcd;

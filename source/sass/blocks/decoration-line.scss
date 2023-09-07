@@ -1,46 +1,47 @@
 @use "../mixins/media.scss" as m;
 
 .decoration-line {
+  position: relative;
   display: flex;
-  gap: 20px;
-
-  @include m.tablet {
-    gap: 40px;
-  }
+  justify-content: center;
 
   &::before {
     content: "";
-    height: 15px;
-    width: calc(50% - 160px);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(50%);
+    width: 100%;
     border-bottom: 2px solid  #68b738;
-
-    @include m.tablet {
-      height: 22px;
-      width: calc(50% - 396px);
-    }
-
-    @include m.desktop {
-      width: calc(50% - 652px);
-    }
   }
 
   &::after {
     content: "";
-    height: 15px;
-    width: 10px;
-    flex-grow: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(50%);
+    right: 0;
     border-bottom: 2px solid  #68b738;
-
-    @include m.tablet {
-      height: 22px;
-    }
   }
 }
 
 .decoration-line__title {
-  max-width: 226px;
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
 
-  @include m.tablet {
-    max-width: 515px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #ffffff;
+    right: 100%;
   }
+}
+
+.decoration-line__text {
+  background-color: #ffffff;
+  padding-right: 40px;
 }

@@ -34,7 +34,7 @@ if (mobile) {
 function init() {
   const myMap = new ymaps.Map("map", {
     center: MAP_COORDS_CENTER,
-    zoom: 17
+    zoom: 14
   });
 
   // window.addEventListener('resize', function () {

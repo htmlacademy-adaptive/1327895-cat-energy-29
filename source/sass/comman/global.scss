@@ -59,8 +59,8 @@ main {
 
   @include m.tablet {
     max-width: 768px;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @include m.desktop {

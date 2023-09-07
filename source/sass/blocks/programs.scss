@@ -4,6 +4,14 @@
 .programs {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include m.tablet {
+    padding-top: 43px;
+  }
+
+  @include m.desktop {
+    padding-bottom: 0;
+  }
 }
 
 .programs__list {
@@ -13,6 +21,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include m.tablet {
+    gap: 30px;
+  }
 
   @include m.desktop {
     display: grid;
@@ -28,11 +40,11 @@
 
 
   @include m.tablet {
-    padding: 77px 316px 53px 52px;
+    padding: 77px 316px 57px 52px;
   }
 
   @include m.desktop {
-    padding: 77px 61px 55px 52px;
+    padding: 77px 61px 58px 52px;
   }
 
   &::before {
@@ -48,8 +60,8 @@
     @include m.tablet {
       width: 200px;
       height: 200px;
-      top: 35px;
-      left: 455px;
+      top: 93px;
+      left: 444px;
     }
 
     @include m.desktop {
@@ -78,16 +90,16 @@
       background-image: url("../img/icons/cat-slim-tablet.svg");
       width: 140px;
       height: 194px;
-      top: 27px;
-      left: 510px;
+      top: 82px;
+      left: 476px;
     }
 
     @include m.desktop {
       background-image: url("../img/icons/cat-slim-desktop.svg");
       width: 70px;
       height: 97px;
-      top: 40px;
-      left: 75px;
+      top: 41px;
+      left: 67px;
     }
   }
 
@@ -102,16 +114,16 @@
       background-image: url("../img/icons/cat-pro-tablet.svg");
       width: 268px;
       height: 112px;
-      top: 90px;
-      left: 412px;
+      top: 136px;
+      left: 411px;
     }
 
     @include m.desktop {
       background-image: url("../img/icons/cat-pro-desktop.svg");
-      width: 268px;
-      height: 112px;
-      top: 70px;
-      left: 30px;
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
     }
   }
 }
@@ -152,7 +164,8 @@
 }
 
 .programs__link {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-top: 15px;
   color: #000000;
   text-align: left;
@@ -163,47 +176,45 @@
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
   min-width: 90px;
 
-  &::after {
-    content: "";
-    border-width: 12px;
-    border-top-width: 8px;
-    border-bottom-width: 8px;
-    border-color: transparent;
-    border-left-color: #000000;
-    border-style: solid;
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    top: 0;
-    left: 140px;
-    transform: translateY(50%);
+  @include m.tablet {
+    margin-top: 30px;
+  }
+
+  @include m.desktop {
+    margin-top: 5px;
   }
 
   &::before {
     content: "";
     display: block;
-    position: absolute;
     width: 18px;
     height: 2px;
+    margin-left: 25px;
+    order: 1;
     background-color: #000000;
     box-sizing: border-box;
-    top: 50%;
-    left: 122px;
     transition: width 0.3s;
+  }
+
+  &::after {
+    content: "";
+    border-width: 7px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-color: transparent;
+    border-left-color: #000000;
+    border-style: solid;
+    display: block;
+    box-sizing: border-box;
+    order: 2;
   }
 
   &:hover,
   &:focus {
     &::before {
       width: 26px;
-    }
-
-    &::after {
-      transform: translate(7px, 50%);
-      transition: 0.3s;
     }
   }
 
