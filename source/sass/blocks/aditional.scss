@@ -3,6 +3,10 @@
 .additional {
   padding-top: 25px;
   padding-bottom: 35px;
+
+  @include m.desktop {
+    padding-top: 0;
+  }
 }
 
 .additional__wrapper {
@@ -14,6 +18,8 @@
 
   @include m.desktop {
     display: grid;
+    padding-top: 74px;
+    padding-bottom: 53px;
     grid-template-columns: 894px 245px;
     gap: 80px;
   }
@@ -23,8 +29,14 @@
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
+  // поменять маргины на паддинги
   list-style: none;
   flex-grow: 1;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+
 }
 
 .additional__present {
@@ -48,7 +60,6 @@
   }
 
   @include m.desktop {
-    margin-bottom: 35px;
     padding: 56px 42px 42px;
     justify-content: center;
     background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background.jpg");

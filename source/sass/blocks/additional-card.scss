@@ -21,10 +21,10 @@
   }
 
   @include m.desktop {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 285px 285px 244px;
     align-items: center;
     gap: 40px;
-    padding: 15px 0 17px 0;
+    padding: 16px 0 13px 0;
     border-left: none;
     border-right: none;
   }
@@ -86,6 +86,7 @@
 
 .additional-card__link {
   padding: 10px;
+  font-size: 16px;
 
   @include m.tablet {
     padding: 7px 220px;
