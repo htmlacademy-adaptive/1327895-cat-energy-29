@@ -63,12 +63,14 @@
 
   @include m.desktop {
     margin-bottom: 30px;
+    margin-right: 5px;
   }
 }
 
 .card__product-link {
   text-decoration: none;
   text-align: left;
+  display: inline-block;
 
   @include m.tablet {
     text-align: center;
@@ -109,6 +111,10 @@
 
 .card__text {
   margin-bottom: 23px;
+
+  @include m.desktop {
+    min-height: 175px;
+  }
 }
 
 .card__title {
@@ -127,6 +133,10 @@
     font-size: 20px;
     line-height: 24px;
     max-width: 155px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 20px;
   }
 
   &--more {
@@ -153,7 +163,18 @@
 
   @include m.tablet {
     font-size: 16px;
+    line-height: 28px;
+    position: relative;
     border-bottom: 1px solid #cdcdcd;
+  }
+
+  @include m.desktop {
+    line-height: 27px;
+    margin-bottom: 6px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

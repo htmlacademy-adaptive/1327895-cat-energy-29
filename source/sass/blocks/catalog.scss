@@ -8,6 +8,10 @@
   @include m.tablet {
     padding: 0;
   }
+
+  @include m.desktop {
+    margin-bottom: 116px;
+  }
 }
 
 .catalog__list {
