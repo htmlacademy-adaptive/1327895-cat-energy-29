@@ -152,16 +152,16 @@
   width: calc(50% - 13px);
 
   &--mail {
-    background-image: url("../img/icons/email-icon.svg");
+    background-image: url("../img/icons/email.svg");
     background-repeat: no-repeat;
     background-position: center right 16px;
 
     &:focus {
-      background-image: url("../img/icons/email-icon-focus.svg");
+      background-image: url("../img/icons/email-focus.svg");
     }
 
     &:invalid:not(:placeholder-shown) {
-      background-image: url("../img/icons/email-icon-error.svg");
+      background-image: url("../img/icons/email-error.svg");
     }
   }
 

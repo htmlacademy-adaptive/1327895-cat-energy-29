@@ -1,0 +1,13 @@
+@use "../mixins/media.scss" as m;
+
+.slider {
+  max-width: 800px;
+  min-height: 90vh;
+  aspect-ratio: 1 / 1;
+
+  @include m.desktop {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    align-self: center;
+  }
+}
