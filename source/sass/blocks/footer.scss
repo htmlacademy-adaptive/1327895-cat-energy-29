@@ -58,7 +58,7 @@
 }
 
 .footer__icon {
-  fill: #666666;
+  color: #666666;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +106,7 @@
 
 .footer__link:hover .footer__icon,
 .footer__link:focus .footer__icon {
-  fill: v.$color-primery;
+  color: v.$color-primery;
 }
 
 .footer__link:active .footer__icon {

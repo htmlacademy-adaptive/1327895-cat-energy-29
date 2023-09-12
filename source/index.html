@@ -10,10 +10,12 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript" defer>
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU"
+    type="text/javascript" defer>
+    </script>
   <script src="./js/main.js" defer></script>
 </head>
+
 <body class="page__body no-js">
   <header class="main-header">
     <div class="main-header__wrapper container">
@@ -58,7 +60,7 @@
             <source srcset="img/promo-banner-desktop.png" width="552" height="499" media="(min-width: 1440px)">
             <source srcset="img/promo-banner-tabtet.png" width="709" height="609" media="(min-width: 768px)">
             <img class="promo__image" src="img/promo-banner-mobile.png" width="280" height="270"
-            alt="Корм для кошек со вкусом курицы.">
+              alt="Корм для кошек со вкусом курицы.">
           </picture>
 
           <a class="promo__link button button--primary" href="form.html">Подобрать программу</a>
@@ -109,7 +111,8 @@
         <div class="exsample__content">
           <h2 class="example__heading heading">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+            16
             часов в день.</p>
           <div class="example__list-wrapper">
             <dl class="example__list">
@@ -129,14 +132,17 @@
           </div>
         </div>
         <div class="example__slider slider">
-          <div class="slider__item">
-            <img class="slider__image image-before" src="img/fat-cat-mobile.png" width="280" height="256" alt="Жирный кот.">
+          <div class="slider__image-wrapper image-wrapper-before">
+            <img class="slider__image image-before" src="img/fat-cat-mobile.png" width="280" height="256"
+              alt="Жирный кот.">
           </div>
-          <div class="slider__item">
+          <div class="slider__image-wrapper image-wrapper-after">
             <img class="slider__image image-after" src="img/skinny-cat-mobile.png" width="280" height="256"
               alt="Худой кот.">
           </div>
-          <input class="slider__range" type="range" min="0" max="100" value="50" aria-label=""></input>
+
+
+          <input class="slider__input" type="range" min="0" max="100" value="50" aria-label=""></input>
           <div class="slider__line" aria-hidden="true"></div>
           <div class="slider__button">
             <svg class="footer__icon" width="40" height="40">
@@ -161,7 +167,8 @@
       <picture>
         <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
         <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map-image" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+        <img class="address__map-image" src="img/location.jpg" width="230" height="362"
+          alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>
