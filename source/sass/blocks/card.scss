@@ -2,7 +2,7 @@
 @use "../comman/variables.scss" as v;
 
 .card {
-  padding: 21px 20px;
+  padding: 21px 20px 24px;
   border-top: 2px solid v.$color-secondary;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -34,9 +34,12 @@
   padding-top: 25px;
 
   @include m.tablet {
-    padding-top: 49px;
     border: 2px solid v.$color-secondary;
     align-self: flex-end;
+  }
+
+  @include m.desktop {
+    padding-top: 49px;
   }
 }
 
@@ -61,6 +64,7 @@
 
 .card__image-product {
   display: block;
+  margin-bottom: 6px;
 
   @include m.desktop {
     margin-bottom: 30px;
@@ -111,8 +115,6 @@
 }
 
 .card__text {
-  margin-bottom: 23px;
-
   @include m.desktop {
     min-height: 175px;
   }
@@ -194,7 +196,8 @@
 
 .card__button {
   text-align: center;
-  padding: 7px;
+  padding: 10px;
+  margin-top: 10px;
   grid-column: 1 / -1;
   font-size: 16px;
 }

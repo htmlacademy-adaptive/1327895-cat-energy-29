@@ -57,9 +57,12 @@
           <h1 class="promo__heading heading">Функциональное питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source srcset="img/promo-banner-desktop.png" width="552" height="499" media="(min-width: 1440px)">
-            <source srcset="img/promo-banner-tabtet.png" width="709" height="609" media="(min-width: 768px)">
-            <img class="promo__image" src="img/promo-banner-mobile.png" width="280" height="270"
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-banner-desktop.webp 1x, img/promo-banner-desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-banner-tablet.webp 1x, img/promo-banner-tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="img/promo-banner-mobile.webp 1x, img/promo-banner-mobile@2x.webp 2x" width="280" height="270">
+            <source srcset="img/promo-banner-desktop.png 1x, img/promo-banner-desktop@2x.png 2x" width="280" height="270" media="(min-width: 1440px)">
+            <source srcset="img/promo-banner-tabtet.png x1, img/promo-banner-tabtet@2x.png 2x" width="709" height="609" media="(min-width: 768px)">
+            <img class="promo__image" src="img/promo-banner-mobile.png" srcset="img/promo-banner-mobile@2x.png x2" width="280" height="270"
               alt="Корм для кошек со вкусом курицы.">
           </picture>
 
@@ -133,15 +136,23 @@
         </div>
         <div class="example__slider slider">
           <div class="slider__image-wrapper image-wrapper-before">
-            <img class="slider__image image-before" src="img/fat-cat-mobile.png" width="280" height="256"
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/fat-cat-tablet.webp 1x, img/fat-cat-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/fat-cat-tablet.webp 1x, img/fat-cat-mobile@2x.webp 2x" width="280" height="556">
+              <source media="(min-width: 1440px)" srcset="img/fat-cat-mobile.png 1x, img/fat-cat-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image image-before" src="img/fat-cat-mobile.png" width="280" height="256"
               alt="Жирный кот.">
+            </picture>
           </div>
           <div class="slider__image-wrapper image-wrapper-after">
-            <img class="slider__image image-after" src="img/skinny-cat-mobile.png" width="280" height="256"
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.webp 1x, img/skinny-cat-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.webp 1x, img/skinny-cat-mobile@2x.webp 2x" width="280" height="556">
+              <source media="(min-width: 1440px)" srcset="img/skinny-cat-mobile.png 1x, img/skinny-cat-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image image-after" src="img/skinny-cat-mobile.png" srcset="img/skinny-cat-mobile@2x.png 2x" width="280" height="256"
               alt="Худой кот.">
+            </picture>
           </div>
-
-
           <input class="slider__input" type="range" min="0" max="100" value="50" aria-label=""></input>
           <div class="slider__line" aria-hidden="true"></div>
           <div class="slider__button">
@@ -165,9 +176,11 @@
       </div>
       <div class="address__map" id="map"></div>
       <picture>
-        <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map-image" src="img/location.jpg" width="230" height="362"
+        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
+        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
+        <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
           alt="Расположение магазина на карте">
       </picture>
     </section>

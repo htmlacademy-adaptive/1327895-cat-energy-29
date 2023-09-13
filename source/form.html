@@ -182,9 +182,12 @@
       </div>
       <div class="address__map" id="map"></div>
       <picture>
-        <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map-image" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
+        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
+        <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
+          alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>
@@ -197,7 +200,7 @@
         <li class="footer__socials-item">
           <a class="footer__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Контакте.</span>
-            <svg class="footer__icon" width="27" height="17">
+            <svg class="footer__icon" width="27" height="17" role="img">
               <use xlink:href="img/sprites/sprite.svg#vk"></use>
             </svg>
           </a>
@@ -205,7 +208,7 @@
         <li class="footer__socials-item">
           <a class="footer__link" href="ttps://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Мы на Ютуб.</span>
-            <svg class="footer__icon" width="24" height="19">
+            <svg class="footer__icon" width="24" height="19" role="img">
               <use xlink:href="img/sprites/sprite.svg#youtube"></use>
             </svg>
           </a>
@@ -213,7 +216,7 @@
         <li class="footer__socials-item">
           <a class="footer__link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Мы в телеграмм.</span>
-            <svg class="footer__icon" width="20" height="18">
+            <svg class="footer__icon" width="20" height="18" role="img">
               <use xlink:href="img/sprites/sprite.svg#telegram"></use>
             </svg>
           </a>

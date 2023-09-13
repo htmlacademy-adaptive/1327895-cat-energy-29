@@ -158,8 +158,8 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
-  html,
   gulp.parallel(
+    html,
     styles,
     scripts,
     svgTask,
