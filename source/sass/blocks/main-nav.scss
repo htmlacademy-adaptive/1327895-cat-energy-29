@@ -39,12 +39,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 37px;
+    gap: 34px;
     background-color: transparent;
+    margin-right: 4px;
   }
 
   @include m.desktop {
     gap: 34px;
+    margin-right: 0;
   }
 }
 

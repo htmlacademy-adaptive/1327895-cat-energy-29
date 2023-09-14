@@ -5,13 +5,15 @@
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 
   @include m.desktop {
     margin: 0;
   }
 
   &--border {
+    padding-top: 23px;
+
     @include m.tablet {
       padding: 25px 27px;
       border: 1px solid #e7e7e7;
@@ -26,17 +28,30 @@
 .form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-
-  @include m.tablet {
-    gap: 72px;
-  }
 
   @include m.desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
     align-items: center;
+  }
+
+
+  &--contacts {
+    gap: 13px;
+    padding-top: 33px;
+    padding-bottom: 4px;
+
+    @include m.tablet {
+      gap: 72px;
+      padding-top: 76px;
+      padding-bottom: 65px;
+    }
+
+    @include m.desktop {
+      padding-top: 72px;
+      padding-bottom: 67px;
+    }
   }
 
   &--whom {
@@ -49,22 +64,8 @@
     }
 
     @include m.desktop {
-      padding-top: 56px;
+      padding-top: 65px;
       padding-bottom: 69px;
-    }
-  }
-
-  &--contacts {
-    padding-top: 26px;
-    padding-bottom: 24px;
-
-    @include m.tablet {
-      padding-top: 76px;
-      padding-bottom: 65px;
-    }
-
-    @include m.desktop {
-      padding-bottom: 67px;
     }
   }
 }
@@ -101,7 +102,7 @@
 
   @include m.desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 100px;
+    column-gap: 80px;
     padding-bottom: 61px;
   }
 }
@@ -119,7 +120,7 @@
   }
 
   @include m.tablet {
-    margin-bottom: 28px;
+    margin-bottom: 13px;
   }
 }
 

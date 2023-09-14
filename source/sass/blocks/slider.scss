@@ -54,12 +54,11 @@
 
 .slider__line {
   position: absolute;
-  inset: 0;
   width: 4px;
   height: 100%;
   background-color: #666666;
   left: var(--position);
-  transform: translateX(-50px);
+  transform: translateX(-50%);
   pointer-events: none;
 }
 

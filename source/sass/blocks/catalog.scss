@@ -7,6 +7,7 @@
 
   @include m.tablet {
     padding: 0;
+    margin-bottom: 82px;
   }
 
   @include m.desktop {
@@ -33,12 +34,3 @@
   }
 }
 
-.catalog__item {
-  @include m.tablet {
-    width: 324px;
-  }
-
-  @include m.desktop {
-    width: 245px;
-  }
-}

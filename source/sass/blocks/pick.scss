@@ -49,11 +49,7 @@
 }
 
 .pick__name {
-  padding-left: 20px;
-
-  @include m.tablet {
-    padding-left: 15px;
-  }
+  padding-left: 18px;
 }
 
 .pick__input:hover ~ .pick__mark,
