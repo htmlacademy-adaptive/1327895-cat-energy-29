@@ -45,16 +45,11 @@
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  padding: 0;
   max-width: 135px;
-  gap: 30px;
+  gap: 28px;
+  margin-right: 3px;
   list-style: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  @include m.tablet {
-    padding: 0;
-  }
+  padding: 23px 0 20px;
 }
 
 .footer__icon {

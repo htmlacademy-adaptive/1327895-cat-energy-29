@@ -5,11 +5,12 @@
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 21px;
+  padding-bottom: 21px;
 
-  @include m.desktop {
-    margin: 0;
+  @include m.tablet {
+    padding-bottom: 0;
   }
+
 
   &--border {
     padding-top: 23px;
@@ -68,11 +69,15 @@
       padding-bottom: 69px;
     }
   }
+
+  &--submit {
+    text-align: center;
+    row-gap: 20px;
+  }
 }
 
 .form__comment {
   padding-top: 38px;
-  padding-bottom: 23px;
 
   @include m.tablet {
     padding-top: 87px;
@@ -89,8 +94,8 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-  padding-top: 36px;
-  padding-bottom: 34px;
+  padding-top: 33px;
+  padding-bottom: 9px;
 
   @include m.tablet {
     display: grid;
@@ -135,11 +140,6 @@
   }
 }
 
-.form__input {
-  flex-grow: 1;
-  width: calc(50% - 13px);
-}
-
 .form__contacts-item {
   margin: 0;
   padding: 0;
@@ -149,9 +149,6 @@
 }
 
 .form__contacts-input {
-  flex-grow: 1;
-  width: calc(50% - 13px);
-
   &--mail {
     background-image: url("../img/icons/email.svg");
     background-repeat: no-repeat;
@@ -184,6 +181,8 @@
 .form__group-comment {
   resize: none;
   width: 100%;
+  padding-right: 10px;
+  height: 147px;
 }
 
 .form__additionally-item {
@@ -192,5 +191,5 @@
 }
 
 .form__button {
-  padding: 13px 10px;
+  padding: 11px 10px;
 }

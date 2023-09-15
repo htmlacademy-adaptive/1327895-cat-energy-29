@@ -4,12 +4,12 @@
 @use "blocks/title.scss";
 @use "blocks/heading.scss";
 @use "blocks/buttons.scss";
+@use "blocks/input-text.scss";
 @use "blocks/main-header.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/footer.scss";
 @use "blocks/page-main.scss";
 @use "blocks/page-catalog.scss";
-@use "blocks/form-main.scss";
 @use "blocks/adress.scss";
 @use "blocks/advantages.scss";
 @use "blocks/example.scss";
@@ -22,7 +22,6 @@
 @use "blocks/aditional.scss";
 @use "blocks/additional-card.scss";
 @use "blocks/text-label.scss";
-@use "blocks/input-text.scss";
 @use "blocks/pick.scss";
 @use "blocks/decoration-line.scss";
 @use "blocks/slider.scss";
