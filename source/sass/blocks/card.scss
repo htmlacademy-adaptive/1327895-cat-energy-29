@@ -55,7 +55,7 @@
   }
 
   @include m.desktop {
-    width: 172px;
+    width: 168px;
     height: 196px;
     margin-bottom: 5px;
   }
@@ -201,4 +201,9 @@
   margin-top: 10px;
   grid-column: 1 / -1;
   font-size: 16px;
+
+  @include m.desktop {
+    padding: 8px;
+    margin-top: 23px;
+  }
 }
