@@ -24,6 +24,13 @@
     right: 0;
     border-bottom: 2px solid  #68b738;
   }
+
+  &::after,
+  &::before {
+    @include m.tablet {
+      height: 16px;
+    }
+  }
 }
 
 .decoration-line__title {
@@ -45,10 +52,9 @@
   display: inline-block;
   background-color: #ffffff;
   padding-right: 20px;
-  max-width: 250px;
 
   @include m.tablet {
     width: auto;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }

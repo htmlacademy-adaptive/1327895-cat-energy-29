@@ -11,12 +11,31 @@
     padding-bottom: 0;
   }
 
+  &--whom,
+  &--border {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include m.tablet {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+  &--whom {
+    @include m.tablet {
+      margin-bottom: 72px;
+    }
+  }
 
   &--border {
     padding-top: 23px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
 
     @include m.tablet {
-      padding: 25px 27px;
+      padding-top: 25px;
+      padding-bottom: 25px;
       border: 1px solid #e7e7e7;
     }
 
@@ -65,14 +84,25 @@
     }
 
     @include m.desktop {
-      padding-top: 65px;
-      padding-bottom: 69px;
+      padding: 65px 110px 69px;
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 
   &--submit {
     text-align: center;
     row-gap: 20px;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+    }
+
+    @include m.desktop {
+      gap: 80px;
+    }
   }
 }
 
@@ -100,7 +130,7 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 42px 123px;
+    gap: 32px 123px;
     padding-top: 57px;
     padding-bottom: 54px;
   }
@@ -191,5 +221,11 @@
 }
 
 .form__button {
-  padding: 11px 10px;
+  padding: 14px 10px;
+}
+
+.form__explanation {
+  @include m.tablet {
+    text-align: left;
+  }
 }

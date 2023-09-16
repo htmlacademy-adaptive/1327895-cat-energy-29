@@ -65,6 +65,9 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 
   &--closed {
     background-image: url("../img/icons/close.svg");
