@@ -7,11 +7,11 @@
 
   @include m.tablet {
     padding: 0;
-    margin-bottom: 82px;
+    margin-bottom: 88px;
   }
 
   @include m.desktop {
-    margin-bottom: 116px;
+    margin-bottom: 110px;
   }
 }
 
@@ -25,12 +25,12 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 68px 60px;
+    gap: 62px 60px;
   }
 
   @include m.desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 93px 72px;
+    gap: 87px 72px;
   }
 }
 

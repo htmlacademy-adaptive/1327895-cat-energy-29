@@ -12,17 +12,18 @@
   }
 
   @include m.tablet {
-    padding: 18px 37px 39px 39px;
+    padding: 18px 34px 39px 39px;
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: linear-gradient(to bottom, #ffffff 81px, v.$color-secondary 81px);
     border-top: none;
   }
 
   @include m.desktop {
-    padding: 0 38px 40px;
-    background: linear-gradient(to bottom, #ffffff 48px, #f2f2f2 48px);
+    padding: 0 37px 40px;
+    background: linear-gradient(to bottom, #ffffff 55px, #f2f2f2 55px);
   }
 }
 
@@ -31,15 +32,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 25px;
+  padding-top: 28px;
 
   @include m.tablet {
     border: 2px solid v.$color-secondary;
     align-self: flex-end;
-  }
-
-  @include m.desktop {
-    padding-top: 49px;
+    padding-top: 48px;
   }
 }
 
@@ -53,21 +51,21 @@
   @include m.tablet {
     width: 168px;
     height: 200px;
+    margin-bottom: 22px;
   }
 
   @include m.desktop {
     width: 168px;
     height: 196px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
 .card__image-product {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 
   @include m.desktop {
-    margin-bottom: 30px;
-    margin-right: 5px;
+    margin-bottom: 14px;
   }
 }
 
@@ -75,6 +73,10 @@
   text-decoration: none;
   text-align: left;
   display: inline-block;
+
+  &--more {
+    text-align: center;
+  }
 
   @include m.tablet {
     text-align: center;
@@ -89,12 +91,6 @@
     opacity: 0.3;
   }
 
-  &--more {
-    text-align: center;
-    width: 100%;
-    display: block;
-  }
-
   &--more::before {
     margin-bottom: 18px;
     content: "";
@@ -107,7 +103,7 @@
     @include m.tablet {
       width: 60px;
       height: 60px;
-      margin-bottom: 35px;
+      margin-bottom: 46px;
       background-image: url("../img/icons/more-icon-big.svg");
     }
   }
@@ -115,17 +111,25 @@
 
 .card__text {
   text-align: left;
+  margin-bottom: 20px;
 
   @include m.tablet {
     text-align: center;
+    width: 100%;
+    margin-bottom: 28px;
   }
 
   @include m.desktop {
     min-height: 175px;
+    margin-bottom: 23px;
   }
 
   &--more {
     text-align: center;
+
+    @include m.tablet {
+      max-width: 180px;
+    }
   }
 }
 
@@ -157,6 +161,7 @@
 
     @include m.tablet {
       max-width: 175px;
+      margin-bottom: 19px;
     }
   }
 }
@@ -167,11 +172,13 @@
   list-style: none;
   font-size: 12px;
   line-height: 16px;
-  min-height: 28px;
+  min-height: 18px;
 
   @include m.tablet {
     font-size: 16px;
     line-height: 20px;
+
+    min-height: 93px;
   }
 
   @include m.desktop {
@@ -190,10 +197,6 @@
     line-height: 28px;
     position: relative;
     border-bottom: 1px solid #cdcdcd;
-  }
-
-  @include m.desktop {
-    line-height: 27px;
     margin-bottom: 6px;
   }
 
@@ -203,14 +206,12 @@
 }
 
 .card__button {
-  text-align: center;
   padding: 10px;
-  margin-top: 10px;
   grid-column: 1 / -1;
   font-size: 16px;
+  width: 100%;
 
   @include m.desktop {
     padding: 8px;
-    margin-top: 23px;
   }
 }

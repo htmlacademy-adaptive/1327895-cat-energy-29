@@ -38,6 +38,16 @@
   z-index: 1;
   position: relative;
 
+  &--additional {
+    @include m.tablet {
+      padding-left: 70px;
+    }
+
+    @include m.desktop {
+      padding-left: 110px;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
