@@ -3,10 +3,9 @@
 
 .programs {
   padding-top: 20px;
-  padding-bottom: 20px;
 
   @include m.tablet {
-    padding-top: 43px;
+    padding-top: 53px;
   }
 
   @include m.desktop {
@@ -23,7 +22,7 @@
   padding: 0;
 
   @include m.tablet {
-    gap: 30px;
+    gap: 29px;
   }
 
   @include m.desktop {
@@ -35,12 +34,12 @@
 
 .programs__item {
   position: relative;
-  padding: 30px 33px 18px 20px;
+  padding: 30px 33px 17px 20px;
   background-color: #f2f2f2;
 
 
   @include m.tablet {
-    padding: 77px 316px 57px 52px;
+    padding: 80px 316px 56px 52px;
   }
 
   @include m.desktop {
@@ -54,8 +53,8 @@
     height: 50px;
     background-color: v.$color-primery;
     border-radius: 50%;
-    left: 20px;
-    top: 21px;
+    left: 19px;
+    top: 23px;
 
     @include m.tablet {
       width: 200px;
@@ -83,15 +82,15 @@
     background-image: url("../img/icons/cat-slim.svg");
     width: 36px;
     height: 50px;
-    top: 18px;
-    left: 28px;
+    top: 20px;
+    left: 26px;
 
     @include m.tablet {
       background-image: url("../img/icons/cat-slim-tablet.svg");
       width: 140px;
       height: 194px;
-      top: 82px;
-      left: 476px;
+      top: 84px;
+      left: 475px;
     }
 
     @include m.desktop {
@@ -170,7 +169,7 @@
   color: #000000;
   text-align: left;
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -179,6 +178,7 @@
   min-width: 90px;
 
   @include m.tablet {
+    font-size: 20px;
     margin-top: 30px;
   }
 
@@ -191,11 +191,15 @@
     display: block;
     width: 18px;
     height: 2px;
-    margin-left: 25px;
+    margin-left: 16px;
     order: 1;
     background-color: #000000;
     box-sizing: border-box;
     transition: width 0.3s;
+
+    @include m.tablet {
+      margin-left: 25px;
+    }
   }
 
   &::after {

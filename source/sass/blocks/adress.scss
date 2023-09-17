@@ -20,6 +20,10 @@
   padding-bottom: 26px;
   background-color: #ffffff;
 
+  @include m.tablet {
+    padding: 63px 40px 59px;
+  }
+
   @include m.desktop {
     width: 565px;
     position: absolute;

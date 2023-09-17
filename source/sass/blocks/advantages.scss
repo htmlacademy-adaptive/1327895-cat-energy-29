@@ -6,7 +6,9 @@
   padding-bottom: 35px;
 
   @include m.tablet {
-    padding-top: 26px;
+    padding-top: 45px;
+    padding-bottom: 67px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @include m.desktop {
@@ -15,7 +17,7 @@
 }
 
 .advantages__heading {
-  margin-bottom: 42px;
+  margin-bottom: 45px;
 
   @include m.tablet {
     margin-bottom: 50px;
@@ -24,11 +26,11 @@
 
 .advantages__list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 26px;
   counter-reset: section;
 
   @include m.tablet {
@@ -61,7 +63,11 @@
       font-family: "Oswald", sans-serif;
       z-index: -1;
       top: 110px;
-      right: 75px;
+      right: 76px;
+    }
+
+    &:first-child::after {
+      right: 99px;
     }
   }
 

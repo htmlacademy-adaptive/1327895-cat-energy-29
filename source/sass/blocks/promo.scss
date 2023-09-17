@@ -60,9 +60,11 @@
 }
 
 .promo__content {
+  padding-top: 27px;
+
   @include m.tablet {
     max-width: 515px;
-    padding: 45px 0 49px 90px;
+    padding: 54px 0 49px 90px;
   }
 
   @include m.desktop {
@@ -108,7 +110,7 @@
     margin: auto;
     right: 0;
     left: 0;
-    top: 245px;
+    top: 255px;
     z-index: -1;
   }
 
@@ -119,7 +121,8 @@
 }
 
 .promo__link {
-  padding: 7px 44px;
+  padding: 11px 44px;
+  margin-top: 31px;
 
   @include m.tablet {
     width: 245px;
