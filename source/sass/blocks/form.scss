@@ -43,6 +43,9 @@
       padding-top: 25px;
       padding-bottom: 25px;
       border: 1px solid #e7e7e7;
+      max-width: 628px;
+      margin: 0 auto;
+      width: 100%;
     }
 
     @include m.desktop {
@@ -136,7 +139,7 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 123px;
+    gap: 32px 62px;
     padding-top: 57px;
     padding-bottom: 54px;
   }

@@ -50,7 +50,7 @@
   </header>
   <main class="form-main">
     <section class="ration">
-      <div class="ration__wrapper container">
+      <div class="ration__wrapper container container--form">
         <h1 class="ration__heading heading">Подбор программы</h1>
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
@@ -99,11 +99,11 @@
         </div>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Контактные&nbsp;данные (владельца&nbsp;кота)</span>
             </h2>
           </div>
-          <div class="form__wrapper form__wrapper--contacts container">
+          <div class="form__wrapper form__wrapper--contacts container container--form">
             <p class="form__contacts-item">
               <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
               <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
@@ -118,10 +118,10 @@
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Комментарий</span></h2>
           </div>
-          <div class="form__comment container">
+          <div class="form__comment container container--form">
             <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
           <textarea class="form__group-comment input-text" name="behaviour" id="behaviour" cols="30" rows="8"
             placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -129,11 +129,11 @@
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Дополнительно</span>
             </h2>
           </div>
-          <div class="form__additionally container">
+          <div class="form__additionally container container--form">
             <p class="form__additionally-item pick">
               <label class="pick__label">
                 <input class="pick__input visually-hidden" type="checkbox" name="supplements" value="sweetener" checked>
@@ -164,7 +164,7 @@
             </p>
           </div>
         </fieldset>
-        <div class="form__wrapper form__wrapper--submit container">
+        <div class="form__wrapper form__wrapper--submit container container--form">
           <button class="form__button button button--primary" type="submit">Отправить заявку</button>
           <span class="form__explanation">* &mdash; Обязательные поля</span>
         </div>

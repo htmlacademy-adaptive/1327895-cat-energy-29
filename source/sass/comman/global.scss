@@ -69,4 +69,16 @@ main {
     padding-left: 110px;
     padding-right: 110px;
   }
+
+  &--form {
+    @include m.tablet {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    @include m.desktop {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+  }
 }
