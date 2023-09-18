@@ -14,8 +14,8 @@
 
   @include m.desktop {
     background: linear-gradient(#ffffff 205px, v.$color-secondary 205px);
-    padding-top: 70px;
-    padding-bottom: 75px;
+    padding-top: 22px;
+    padding-bottom: 72px;
   }
 }
 
@@ -71,7 +71,7 @@
   @include m.tablet {
     column-gap: 42px;
     grid-template-columns: repeat(2, 162px);
-    margin-bottom: 60px;
+    margin-bottom: 48px;
   }
 }
 
@@ -174,6 +174,10 @@
   margin-top: 20px;
 
   @include m.tablet {
-    margin: 43px auto 0;
+    margin: 55px auto 0;
+  }
+
+  @include m.desktop {
+    margin: 0;
   }
 }

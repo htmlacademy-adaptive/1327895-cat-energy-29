@@ -5,11 +5,12 @@
   padding-bottom: 35px;
 
   @include m.tablet {
-    padding-bottom: 45px;
+    margin-bottom: 40px;
     padding-top: 68px;
   }
 
   @include m.desktop {
+    margin-bottom: 0;
     padding-top: 0;
   }
 }
@@ -23,7 +24,6 @@
 
   @include m.desktop {
     display: grid;
-    padding-top: 77px;
     padding-bottom: 53px;
     grid-template-columns: 894px 245px;
     gap: 80px;
@@ -38,6 +38,10 @@
   flex-grow: 1;
 
   @include m.tablet {
+    margin-bottom: 70px;
+  }
+
+  @include m.desktop {
     margin-bottom: 0;
   }
 }
@@ -57,14 +61,16 @@
 
   @include m.tablet {
     min-height: 200px;
-    align-items: center;
-    padding: 57px 125px 57px 77px;
+    align-items: start;
+    padding: 57px 122px 15px 77px;
     justify-content: space-between;
+    text-align: left;
   }
 
   @include m.desktop {
     padding: 56px 42px 42px;
     justify-content: center;
+    text-align: center;
     background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background.jpg");
   }
 
@@ -88,4 +94,12 @@
   margin: 0;
   padding: 0;
   max-width: 165px;
+
+  @include m.tablet {
+    margin-top: 14px;
+  }
+
+  @include m.desktop {
+    margin-top: 0;
+  }
 }

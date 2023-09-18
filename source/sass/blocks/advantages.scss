@@ -75,6 +75,10 @@
     &::after {
       right: 0;
     }
+
+    &:first-child::after {
+      right: 23px;
+    }
   }
 
   &::before {

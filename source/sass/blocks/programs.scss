@@ -9,6 +9,7 @@
   }
 
   @include m.desktop {
+    padding-top: 42px;
     padding-bottom: 0;
   }
 }
@@ -43,7 +44,7 @@
   }
 
   @include m.desktop {
-    padding: 77px 61px 58px 52px;
+    padding: 77px 51px 58px;
   }
 
   &::before {
@@ -153,12 +154,7 @@
   color: #000000;
 
   @include m.tablet {
-    max-width: 340px;
     border: none;
-  }
-
-  @include m.desktop {
-    max-width: 460px;
   }
 }
 

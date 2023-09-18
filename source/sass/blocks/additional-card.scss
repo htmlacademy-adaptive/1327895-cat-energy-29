@@ -12,7 +12,7 @@
   }
 
   @include m.tablet {
-    padding: 17px 38px 28px 38px;
+    padding: 28px 38px 27px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 23px 40px;
@@ -62,7 +62,7 @@
     line-height: 20px;
     margin-bottom: 0;
     justify-content: flex-end;
-    column-gap: 45px;
+    column-gap: 30px;
     grid-column: 2 / -2;
   }
 
@@ -89,7 +89,6 @@
   font-size: 16px;
 
   @include m.tablet {
-    padding: 7px 220px;
     grid-column: 1 / -1;
   }
 

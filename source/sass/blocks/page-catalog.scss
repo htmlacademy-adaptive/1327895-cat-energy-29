@@ -5,6 +5,8 @@
   max-width: initial;
   padding-left: 0;
   padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   @include m.tablet {
     max-width: 768px;
@@ -15,9 +17,6 @@
 
   @include m.desktop {
     max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
-    padding-top: 63px;
-    padding-bottom: 70px;
+    padding: 60px 110px 70px;
   }
 }

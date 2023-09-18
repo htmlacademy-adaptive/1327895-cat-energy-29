@@ -1,14 +1,25 @@
 @use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
 
 .address {
   margin: 0 auto;
   min-height: 400px;
   position: relative;
+  background-color: v.$color-secondary;
+
+  &--index {
+    background-color: #ffffff;
+  }
+
+  @include m.desktop {
+    background-color: #ffffff;
+  }
 }
 
 .address__wrapper {
   @include m.desktop {
     position: relative;
+    background-color: #ffffff;
   }
 }
 
@@ -18,7 +29,7 @@
   justify-content: space-between;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: #ffffff;
+
 
   @include m.tablet {
     padding: 63px 40px 59px;
@@ -31,6 +42,7 @@
     left: 110px;
     padding: 62px 65px 60px 80px;
     z-index: 2;
+    background-color: #ffffff;
   }
 }
 
