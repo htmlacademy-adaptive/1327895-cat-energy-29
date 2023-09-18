@@ -2,52 +2,135 @@
 @use "../comman/variables.scss" as v;
 
 .card {
-  padding-top: 19px;
-  padding-bottom: 14px;
+  padding: 21px 20px 24px;
   border-top: 2px solid v.$color-secondary;
-  border-bottom: 2px solid v.$color-secondary;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
+  &:last-child {
+    border-bottom: 2px solid v.$color-secondary;
+  }
 
   @include m.tablet {
-    background-color: v.$color-secondary;
-    padding: 8px 37px 39px 39px;
+    padding: 18px 34px 39px 39px;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff 81px, v.$color-secondary 81px);
+    border-top: none;
   }
 
   @include m.desktop {
-    padding: 0 38px 40px 39px;
+    padding: 0 37px 40px;
+    background: linear-gradient(to bottom, #ffffff 55px, #f2f2f2 55px);
   }
 }
 
 .card--more {
-  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, #ffffff 81px, #ffffff 81px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+  padding-top: 28px;
 
-  &::before {
+  @include m.tablet {
+    border: 2px solid v.$color-secondary;
+    align-self: flex-end;
+    padding-top: 48px;
+  }
+}
+
+.card__link-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 112px;
+
+  @include m.tablet {
+    width: 168px;
+    height: 200px;
+    margin-bottom: 22px;
+  }
+
+  @include m.desktop {
+    width: 168px;
+    height: 196px;
+    margin-bottom: 10px;
+  }
+}
+
+.card__image-product {
+  margin-bottom: 4px;
+
+  @include m.desktop {
+    margin-bottom: 14px;
+  }
+}
+
+.card__product-link {
+  text-decoration: none;
+  text-align: left;
+  display: inline-block;
+
+  &--more {
+    text-align: center;
+  }
+
+  @include m.tablet {
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--more::before {
+    margin-bottom: 18px;
     content: "";
-    display: block;
+    display: inline-block;
     width: 30px;
     height: 30px;
     background-image: url("../img/icons/more-icon.svg");
     background-repeat: no-repeat;
-  }
 
-  @include m.tablet {
-    border: 2px solid v.$color-secondary;
-
-    &::before {
+    @include m.tablet {
       width: 60px;
       height: 60px;
-      background-size: cover;
+      margin-bottom: 46px;
+      background-image: url("../img/icons/more-icon-big.svg");
     }
   }
 }
 
+.card__text {
+  text-align: left;
+  margin-bottom: 20px;
 
-.card__product-name {
-  text-decoration: none;
+  @include m.tablet {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  @include m.desktop {
+    min-height: 175px;
+    margin-bottom: 23px;
+  }
+
+  &--more {
+    text-align: center;
+
+    @include m.tablet {
+      max-width: 180px;
+    }
+  }
 }
 
 .card__title {
@@ -60,16 +143,26 @@
   text-transform: uppercase;
   line-height: 20px;
   color: #222222;
-
-  &--more {
-    text-align: center;
-    color: #111111;
-    margin-bottom: 8px;
-  }
+  max-width: 80px;
 
   @include m.tablet {
     font-size: 20px;
     line-height: 24px;
+    max-width: 155px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 20px;
+  }
+
+  &--more {
+    max-width: 100%;
+    margin-bottom: 8px;
+
+    @include m.tablet {
+      max-width: 175px;
+      margin-bottom: 19px;
+    }
   }
 }
 
@@ -77,6 +170,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 18px;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+
+    min-height: 93px;
+  }
+
+  @include m.desktop {
+    min-height: 105px;
+  }
 }
 
 .card__item {
@@ -87,25 +194,24 @@
 
   @include m.tablet {
     font-size: 16px;
+    line-height: 28px;
+    position: relative;
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 6px;
   }
-}
 
-.card__more {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 21px;
-  text-align: center;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card__button {
-  text-align: center;
-  padding: 10px 110px;
-
-  @include m.tablet {
-    padding: 10px 93px;
-  }
+  padding: 10px;
+  grid-column: 1 / -1;
+  font-size: 16px;
+  width: 100%;
 
   @include m.desktop {
-    padding: 10px 53px;
+    padding: 8px;
   }
 }

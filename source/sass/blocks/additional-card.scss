@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid #cdcdcd;
 
   &:last-child {
@@ -12,7 +12,7 @@
   }
 
   @include m.tablet {
-    padding: 17px 38px 28px 38px;
+    padding: 28px 38px 27px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 23px 40px;
@@ -21,10 +21,10 @@
   }
 
   @include m.desktop {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 285px 285px 244px;
     align-items: center;
     gap: 40px;
-    padding: 15px 0 17px 0;
+    padding: 16px 0 13px 0;
     border-left: none;
     border-right: none;
   }
@@ -62,7 +62,7 @@
     line-height: 20px;
     margin-bottom: 0;
     justify-content: flex-end;
-    column-gap: 45px;
+    column-gap: 30px;
     grid-column: 2 / -2;
   }
 
@@ -85,8 +85,10 @@
 }
 
 .additional-card__link {
+  padding: 10px;
+  font-size: 16px;
+
   @include m.tablet {
-    padding: 7px 220px;
     grid-column: 1 / -1;
   }
 

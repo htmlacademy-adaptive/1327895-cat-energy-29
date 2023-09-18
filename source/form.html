@@ -6,11 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript" defer>
+  </script>
   <script src="./js/main.js" defer></script>
 </head>
 
@@ -53,8 +55,8 @@
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
       <form class="ration__selection form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="form__wrapper form__wrapper--whom container">
-          <fieldset class="form__group">
+        <div class="form__wrapper form__wrapper--whom">
+          <fieldset class="form__group form__group--whom">
             <h2 class="visually-hidden">Введите данные вашего кота.</h2>
             <p class="form__data-item">
               <label class="form__data-label text-label" for="name">Имя:*</label>
@@ -65,7 +67,7 @@
               <input class="form__input input-text" id="weight" type="text" placeholder="7" required>
             </p>
             <p class="form__data-item">
-              <label class="form__data-label text-label" for="age">Возраст (лет):*</label>
+              <label class="form__data-label text-label" for="age">Возраст (лет):</label>
               <input class="form__input input-text" id="age" type="number" placeholder="7" required>
             </p>
             </ul>
@@ -97,8 +99,8 @@
         </div>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title">
-              <span class="title__text">Контактные данные (владельца кота)</span>
+            <h2 class="decoration-line__title title container">
+              <span class="decoration-line__text">Контактные&nbsp;данные (владельца&nbsp;кота)</span>
             </h2>
           </div>
           <div class="form__wrapper form__wrapper--contacts container">
@@ -116,19 +118,19 @@
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title">
-              <span class="title__text">Комментарий</span></h2>
+            <h2 class="decoration-line__title title container">
+              <span class="decoration-line__text">Комментарий</span></h2>
           </div>
           <div class="form__comment container">
             <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
-          <textarea class="form__group-comment input-text" name="behaviour" id="behaviour" cols="30" rows="10"
+          <textarea class="form__group-comment input-text" name="behaviour" id="behaviour" cols="30" rows="8"
             placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title">
-              <span class="title__text">Дополнительно</span>
+            <h2 class="decoration-line__title title container">
+              <span class="decoration-line__text">Дополнительно</span>
             </h2>
           </div>
           <div class="form__additionally container">
@@ -143,14 +145,14 @@
               <label class="pick__label">
                 <input class="pick__input visually-hidden" type="checkbox" name="supplements" value="milk">
                 <span class="pick__mark pick__mark--checkbox"></span>
-                <span class="pick__name text-label">Молоко</span>
+                <span class="pick__name text-label">Питьевая вода</span>
               </label>
             </p>
             <p class="form__additionally-item pick">
               <label class="pick__label">
                 <input class="pick__input visually-hidden" type="checkbox" name="supplements" value="water">
                 <span class="pick__mark pick__mark--checkbox"></span>
-                <span class="pick__name text-label">Питьевая вода</span>
+                <span class="pick__name text-label">Молоко</span>
               </label>
             </p>
             <p class="form__additionally-item pick">
@@ -162,7 +164,7 @@
             </p>
           </div>
         </fieldset>
-        <div class="form__wrapper container">
+        <div class="form__wrapper form__wrapper--submit container">
           <button class="form__button button button--primary" type="submit">Отправить заявку</button>
           <span class="form__explanation">* &mdash; Обязательные поля</span>
         </div>
@@ -172,46 +174,60 @@
       <h2 class="visually-hidden">Наш адресс.</h2>
       <div class="address__wrapper container">
         <div class="address__info">
-          <p class="address__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="address__text">ул. Большая Конюшенная, д. 19/8
+            <span class="address__text-city">Санкт-Петербург</span>
+          </p>
         </div>
       </div>
+      <div class="address__map" id="map"></div>
       <picture>
-        <source srcset="img/location.png, img/location@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.jpg" width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map" src="img/location.jpg" width="230" height="362" alt="Расположение магазина на карте">
+        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
+        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
+        <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
+          alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper  container">
       <a class="footer__logo-link" href="#">
         <img class="footer__logo" src="img/logo/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
       </a>
       <ul class="footer__socials">
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в контакте</span>
-            <!-- иконка в контакте -->
+          <a class="footer__link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Контакте.</span>
+            <svg class="footer__icon" width="27" height="17" role="img">
+              <use xlink:href="img/sprites/sprite.svg#vk"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="ttps://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Мы на Ютуб</span>
-            <!-- иконка ютуба -->
+          <a class="footer__link" href="ttps://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы на Ютуб.</span>
+            <svg class="footer__icon" width="24" height="19" role="img">
+              <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__socials-item">
-          <a class="footer__social-link" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Мы в телеграмм</span>
-            <!--иконка телеграмм -->
+          <a class="footer__link" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в телеграмм.</span>
+            <svg class="footer__icon" width="20" height="18" role="img">
+              <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="footer__developer">
         <a class="footer__developer-link" href="https://htmlacademy.ru/">HTML Academy</a>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/">
-          <!-- иконка логотипа сайта-разработчика -->
+        <a class="footer__link" href="https://htmlacademy.ru/">
+          <svg class="footer__icon" width="27" height="34">
+            <use xlink:href="img/sprites/sprite.svg#html-academy"></use>
+          </svg>
         </a>
       </div>
     </div>

@@ -3,28 +3,29 @@
 
 .main-header {
   position: relative;
+  border-bottom: 1px solid v.$color-secondary;
+  padding-top: 7px;
+  padding-bottom: 4px;
 
   @include m.tablet {
-    padding-top: 25px;
+    padding-top: 24px;
+    border: none;
   }
 
   @include m.desktop {
-    padding-top: 56px;
+    padding-top: 54px;
+    padding-bottom: 10px;
   }
 }
 
 
 .main-header__wrapper {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 85px;
-  justify-content: space-between;
-}
-
-.no-js .main-header__wrapper {
   justify-content: flex-start;
+  align-items: center;
   gap: 56px;
+  flex-wrap: wrap;
+  min-height: 53px;
 
   @include m.tablet {
     justify-content: space-between;
@@ -65,6 +66,9 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 
   &--closed {
     background-image: url("../img/icons/close.svg");

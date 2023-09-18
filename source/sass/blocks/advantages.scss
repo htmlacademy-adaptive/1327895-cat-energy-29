@@ -3,26 +3,40 @@
 
 .advantages {
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    padding-top: 45px;
+    padding-bottom: 67px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include m.desktop {
+    padding-top: 72px;
+  }
 }
 
 .advantages__heading {
-  margin-bottom: 42px;
+  margin-bottom: 45px;
+
+  @include m.tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .advantages__list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 26px;
   counter-reset: section;
 
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 135px;
+    gap: 92px 61px;
   }
 
   @include m.desktop {
@@ -37,7 +51,7 @@
   z-index: 7;
 
   @include m.tablet {
-    padding: 120px 0 20px;
+    padding: 133px 0 20px;
 
     &::after {
       content: counter(section);
@@ -48,8 +62,22 @@
       color: v.$color-secondary;
       font-family: "Oswald", sans-serif;
       z-index: -1;
-      top: 100px;
+      top: 110px;
+      right: 76px;
+    }
+
+    &:first-child::after {
+      right: 99px;
+    }
+  }
+
+  @include m.desktop {
+    &::after {
       right: 0;
+    }
+
+    &:first-child::after {
+      right: 23px;
     }
   }
 
@@ -92,4 +120,8 @@
 .advantages__text {
   margin: 0;
   padding: 0;
+
+  @include m.tablet {
+    max-width: 265px;
+  }
 }

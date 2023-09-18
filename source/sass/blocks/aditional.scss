@@ -3,19 +3,30 @@
 .additional {
   padding-top: 25px;
   padding-bottom: 35px;
-}
 
-.additional__heading {
-  margin-bottom: 36px;
-  line-height: 24px;
+  @include m.tablet {
+    margin-bottom: 40px;
+    padding-top: 68px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .additional__wrapper {
+  padding-top: 32px;
+
+  @include m.tablet {
+    padding-top: 81px;
+  }
+
   @include m.desktop {
     display: grid;
+    padding-bottom: 53px;
     grid-template-columns: 894px 245px;
     gap: 80px;
-    padding-top: 81px;
   }
 }
 
@@ -25,6 +36,14 @@
   margin-bottom: 35px;
   list-style: none;
   flex-grow: 1;
+
+  @include m.tablet {
+    margin-bottom: 70px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 0;
+  }
 }
 
 .additional__present {
@@ -34,7 +53,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 56px 42px 42px;
+  padding: 58px 42px 44px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,15 +61,16 @@
 
   @include m.tablet {
     min-height: 200px;
-    align-items: center;
-    padding: 57px 125px 57px 77px;
+    align-items: start;
+    padding: 57px 122px 15px 77px;
     justify-content: space-between;
+    text-align: left;
   }
 
   @include m.desktop {
-    margin-bottom: 35px;
     padding: 56px 42px 42px;
     justify-content: center;
+    text-align: center;
     background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background.jpg");
   }
 
@@ -61,6 +81,7 @@
     background-repeat: no-repeat;
     width: 78px;
     height: 80px;
+    margin-bottom: 48px;
   }
 }
 
@@ -68,8 +89,17 @@
   display: inline-block;
   color: #ffffff;
   font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
   margin: 0;
   padding: 0;
   max-width: 165px;
+
+  @include m.tablet {
+    margin-top: 14px;
+  }
+
+  @include m.desktop {
+    margin-top: 0;
+  }
 }

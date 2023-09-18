@@ -1,11 +1,30 @@
+@use "../mixins/media.scss" as m;
+
 .input-text {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 13px;
+  padding: 13px 35px 13px 16px;
   border: 1px solid #e7e7e7;
+  appearance: textfield;
+  flex-grow: 1;
+  width: calc(50% - 13px);
+
+  &::placeholder {
+    color: #444444;
+    opacity: 1;
+  }
+
+  @include m.tablet {
+    font-size: 20px;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 
   &:hover:not(:disabled) {
     border-color: #cdcdcd;

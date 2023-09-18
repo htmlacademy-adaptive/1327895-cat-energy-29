@@ -10,7 +10,7 @@
   }
 
   @include m.desktop {
-    padding-top: 74px;
+    padding-top: 60px;
     padding-bottom: 82px;
   }
 }
@@ -29,8 +29,11 @@
   color: #000000;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  max-width: 230px;
 
   @include m.tablet {
     max-width: 340px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

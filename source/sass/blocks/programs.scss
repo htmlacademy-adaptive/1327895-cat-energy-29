@@ -3,7 +3,15 @@
 
 .programs {
   padding-top: 20px;
-  padding-bottom: 20px;
+
+  @include m.tablet {
+    padding-top: 53px;
+  }
+
+  @include m.desktop {
+    padding-top: 42px;
+    padding-bottom: 0;
+  }
 }
 
 .programs__list {
@@ -14,6 +22,10 @@
   margin: 0;
   padding: 0;
 
+  @include m.tablet {
+    gap: 29px;
+  }
+
   @include m.desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,16 +35,16 @@
 
 .programs__item {
   position: relative;
-  padding: 30px 33px 18px 20px;
+  padding: 30px 33px 17px 20px;
   background-color: #f2f2f2;
 
 
   @include m.tablet {
-    padding: 77px 316px 53px 52px;
+    padding: 80px 316px 56px 52px;
   }
 
   @include m.desktop {
-    padding: 77px 61px 55px 52px;
+    padding: 77px 51px 58px;
   }
 
   &::before {
@@ -42,14 +54,14 @@
     height: 50px;
     background-color: v.$color-primery;
     border-radius: 50%;
-    left: 20px;
-    top: 21px;
+    left: 19px;
+    top: 23px;
 
     @include m.tablet {
       width: 200px;
       height: 200px;
-      top: 35px;
-      left: 455px;
+      top: 93px;
+      left: 444px;
     }
 
     @include m.desktop {
@@ -71,23 +83,23 @@
     background-image: url("../img/icons/cat-slim.svg");
     width: 36px;
     height: 50px;
-    top: 18px;
-    left: 28px;
+    top: 20px;
+    left: 26px;
 
     @include m.tablet {
       background-image: url("../img/icons/cat-slim-tablet.svg");
       width: 140px;
       height: 194px;
-      top: 27px;
-      left: 510px;
+      top: 84px;
+      left: 475px;
     }
 
     @include m.desktop {
       background-image: url("../img/icons/cat-slim-desktop.svg");
       width: 70px;
       height: 97px;
-      top: 40px;
-      left: 75px;
+      top: 41px;
+      left: 67px;
     }
   }
 
@@ -102,16 +114,16 @@
       background-image: url("../img/icons/cat-pro-tablet.svg");
       width: 268px;
       height: 112px;
-      top: 90px;
-      left: 412px;
+      top: 136px;
+      left: 411px;
     }
 
     @include m.desktop {
       background-image: url("../img/icons/cat-pro-desktop.svg");
-      width: 268px;
-      height: 112px;
-      top: 70px;
-      left: 30px;
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
     }
   }
 }
@@ -142,24 +154,71 @@
   color: #000000;
 
   @include m.tablet {
-    max-width: 340px;
-  }
-
-  @include m.desktop {
-    max-width: 460px;
+    border: none;
   }
 }
 
 .programs__link {
-  display: inline-block;
-  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
   color: #000000;
-  text-align: center;
+  text-align: left;
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+  min-width: 90px;
+
+  @include m.tablet {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  @include m.desktop {
+    margin-top: 5px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-left: 16px;
+    order: 1;
+    background-color: #000000;
+    box-sizing: border-box;
+    transition: width 0.3s;
+
+    @include m.tablet {
+      margin-left: 25px;
+    }
+  }
+
+  &::after {
+    content: "";
+    border-width: 7px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-color: transparent;
+    border-left-color: #000000;
+    border-style: solid;
+    display: block;
+    box-sizing: border-box;
+    order: 2;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 26px;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

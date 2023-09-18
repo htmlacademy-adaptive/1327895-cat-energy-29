@@ -47,16 +47,21 @@ img {
   }
 }
 
+main {
+  flex: 1;
+}
+
 .container {
   max-width: 320px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 
   @include m.tablet {
     max-width: 768px;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @include m.desktop {

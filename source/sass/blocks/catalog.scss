@@ -1,7 +1,18 @@
 @use "../mixins/media.scss" as m;
 
 .catalog__heading {
-  margin-bottom: 27px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include m.tablet {
+    padding: 0;
+    margin-bottom: 88px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 110px;
+  }
 }
 
 .catalog__list {
@@ -10,26 +21,15 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 11px;
 
   @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 68px 60px;
+    gap: 62px 60px;
   }
 
   @include m.desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 63px 80px;
-  }
-}
-
-.catalog__item {
-  @include m.tablet {
-    width: 324px;
-  }
-
-  @include m.desktop {
-    width: 245px;
+    gap: 87px 72px;
   }
 }
