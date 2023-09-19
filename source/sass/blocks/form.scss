@@ -81,7 +81,7 @@
   }
 
   &--whom {
-    padding-top: 37px;
+    padding-top: 40px;
     padding-bottom: 26px;
 
     @include m.tablet {
@@ -197,7 +197,7 @@
   &--mail {
     background-image: url("../img/icons/email.svg");
     background-repeat: no-repeat;
-    background-position: center right 16px;
+    background-position: center right 10px;
 
     &:focus {
       background-image: url("../img/icons/email-focus.svg");
@@ -211,7 +211,7 @@
   &--tel {
     background-image: url("../img/icons/phone-icon.svg");
     background-repeat: no-repeat;
-    background-position: center right 16px;
+    background-position: center right 13px;
 
     &:focus {
       background-image: url("../img/icons/phone-icon-focus.svg");
@@ -236,7 +236,6 @@
 
   @include m.desktop {
     padding-top: 12px;
-
   }
 }
 
@@ -246,11 +245,12 @@
 }
 
 .form__button {
-  padding: 12px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 16px;
 
   @include m.tablet {
     padding: 16px;
+    font-size: 20px;
   }
 
   @include m.desktop {

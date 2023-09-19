@@ -64,7 +64,7 @@
 
   @include m.tablet {
     max-width: 515px;
-    padding: 54px 0 49px 90px;
+    padding: 55px 0 49px 90px;
   }
 
   @include m.desktop {
@@ -93,6 +93,7 @@
   line-height: 14px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  margin-bottom: 31px;
 
   @include m.tablet {
     font-size: 20px;
@@ -110,7 +111,7 @@
     margin: auto;
     right: 0;
     left: 0;
-    top: 255px;
+    top: 257px;
     z-index: -1;
   }
 
@@ -122,11 +123,11 @@
 
 .promo__link {
   padding: 11px 44px;
-  margin-top: 31px;
 
   @include m.tablet {
+    font-size: 20px;
     width: 245px;
-    padding: 16px 26px;
+    padding: 18px 26px;
     margin-top: 50px;
   }
 
