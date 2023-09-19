@@ -50,6 +50,10 @@
 
 .pick__name {
   padding-left: 16px;
+
+  @include m.tablet {
+    padding-left: 19px;
+  }
 }
 
 .pick__input:hover ~ .pick__mark,
