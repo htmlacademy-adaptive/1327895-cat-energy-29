@@ -6,14 +6,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" as="style">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript" defer>
-  </script>
-  <script src="./js/main.js" defer></script>
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font"type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU"
+    type="text/javascript" loading="lazy" defer as="script">
+    </script>
+  <script src="./js/main.js" loading="lazy" as="script" defer></script>
 </head>
 
 <body class="page__body  no-js">
@@ -70,7 +73,6 @@
               <label class="form__data-label text-label" for="age">Возраст (лет):</label>
               <input class="form__input input-text" id="age" type="number" placeholder="7" required>
             </p>
-            </ul>
           </fieldset>
           <fieldset class="form__group form__group--border">
             <h2 class="visually-hidden">Укажите цель составления программы.</h2>
@@ -182,12 +184,18 @@
       </div>
       <div class="address__map" id="map"></div>
       <picture>
-        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
-        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
-          alt="Расположение магазина на карте">
+        <source type="image/webp" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x" width="1440"
+          height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x" width="768"
+          height="400" media="(min-width: 768px)">
+          <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x" width="230"
+          height="362">
+        <source srcset="img/location-desktop.png 1x, img/location-desktop@2x.png 2x" width="1440" height="400"
+          media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png 1x, img/location-tablet@2x.png 2x" width="768" height="400"
+          media="(min-width: 768px)">
+        <img class="address__map-image" src="img/location.png" srcset="img/location@2x.png 2x" width="230"
+          height="362" alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>

@@ -58,6 +58,9 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background@2x.jpg");
+  }
 
   @include m.tablet {
     min-height: 200px;
@@ -65,6 +68,11 @@
     padding: 57px 122px 15px 77px;
     justify-content: space-between;
     text-align: left;
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background-tablet@2x.jpg");
+    }
   }
 
   @include m.desktop {
@@ -72,6 +80,10 @@
     justify-content: center;
     text-align: center;
     background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/present-background@2x.jpg");
+    }
   }
 
   &::before {

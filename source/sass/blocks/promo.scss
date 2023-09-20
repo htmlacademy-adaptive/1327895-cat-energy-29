@@ -19,6 +19,10 @@
     top: 0;
     width: 100%;
     height: 302px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/promo-background-mobile@2x.jpg");
+    }
   }
 
   @include m.tablet {
@@ -42,6 +46,10 @@
       top: 0;
       right: 0;
       left: auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/promo-background-desktop@2x.jpg");
+      }
     }
   }
 }

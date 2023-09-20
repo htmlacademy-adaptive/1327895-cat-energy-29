@@ -62,9 +62,18 @@
   display: inline-block;
   background-color: #ffffff;
   padding-right: 20px;
+  max-width: 206px;
 
   @include m.tablet {
     width: auto;
     padding-right: 40px;
+  }
+
+  &--catalog {
+    max-width: 250px;
+
+    @include m.tablet {
+      max-width: 100%;
+    }
   }
 }

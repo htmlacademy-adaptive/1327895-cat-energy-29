@@ -59,7 +59,7 @@
   background-color: #666666;
   left: var(--position);
   transform: translateX(-50%);
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 .slider__button {
@@ -67,15 +67,29 @@
   position: absolute;
   border-radius: 50%;
   top: 50%;
+  border: none;
+  background-color: transparent;
   left: var(--position);
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  // pointer-events: none;
+  z-index: 2;
 }
 
-.slider__button:hover {
-  color: v.$color-secondary;
+.slider__button:hover,
+.slider__button:focus {
+  color: v.$color-primary;
+  outline: none;
+}
+
+.slider__button:hover ~ .slider__line,
+.slider__button:focus ~ .slider__line {
+  background-color: v.$color-primary;
 }
 
 .slider__button:active {
+  color: #5eaa2f;
+}
+
+.slider__button:active ~ .slider__line {
   color: #5eaa2f;
 }

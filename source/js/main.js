@@ -26,7 +26,7 @@ let mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 if (mobile) {
   MAP_COORDS_CENTER = [59.938631, 30.323037];
 } else {
-  MAP_COORDS_CENTER = [59.938631, 30.323037]
+  MAP_COORDS_CENTER = [59.938631, 30.3295]
 };
 
 // Создание карты.
@@ -37,20 +37,36 @@ function init() {
     zoom: 14
   });
 
+
   // window.addEventListener('resize', function () {
   //   console.log('RESIZE');
   //   // myMap.container.fitToViewport([false])
   // })
+
+  let imageSource;
+
+  if(mobile) {
+    imageSource = {
+      src: '../img/icons/map-pin.png',
+      size: [56, 52],
+      offset: [-36, -52]
+    }
+  } else {
+    imageSource = {
+      src: '../img/icons/map-pin-desktop.png',
+      size: [113, 106],
+      offset: [-45, -40]
+    }
+  }
 
   marks.forEach(function (mark, i) {
     geoObjects.push(new ymaps.Placemark([mark.latitude, mark.longitude], {
       hintContent: mark.hintContent
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/map-pin.png',
-      iconImageSize: [56, 52],
-      iconImageOffset: [-36, -52]
-
+      iconImageHref: imageSource.src,
+      iconImageSize: imageSource.size,
+      iconImageOffset: imageSource.offset
     }))
   })
 
@@ -63,6 +79,8 @@ function init() {
 // Slider
 
 const container = document.querySelector('.slider');
+const sliderButton = document.querySelector('.slider__button');
+
 document.querySelector('.slider__input').addEventListener('input', (e) => {
   container.style.setProperty('--position', `${e.target.value}%`);
-})
+});
