@@ -30,7 +30,7 @@
   display: block;
   width: 13px;
   height: 13px;
-  background-color: v.$color-primery;
+  background-color: v.$color-primary;
   border-radius: 50%;
 
   @include m.tablet {
@@ -50,6 +50,10 @@
 
 .pick__name {
   padding-left: 16px;
+
+  @include m.tablet {
+    padding-left: 19px;
+  }
 }
 
 .pick__input:hover ~ .pick__mark,

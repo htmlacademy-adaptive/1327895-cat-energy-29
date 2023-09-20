@@ -15,16 +15,13 @@
   &--border {
     padding-left: 20px;
     padding-right: 20px;
-
-    @include m.tablet {
-      padding-left: 70px;
-      padding-right: 70px;
-    }
   }
 
   &--whom {
     @include m.tablet {
       margin-bottom: 72px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
 
     @include m.desktop {
@@ -40,9 +37,11 @@
     border-bottom: 1px solid #e7e7e7;
 
     @include m.tablet {
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding: 20px 27px 25px;
       border: 1px solid #e7e7e7;
+      max-width: 628px;
+      margin: 0 auto;
+      width: 100%;
     }
 
     @include m.desktop {
@@ -59,7 +58,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
-    align-items: center;
+    align-items: start;
   }
 
 
@@ -69,24 +68,25 @@
     padding-bottom: 4px;
 
     @include m.tablet {
-      gap: 72px;
+      gap: 14px;
       padding-top: 76px;
       padding-bottom: 65px;
     }
 
     @include m.desktop {
-      padding-top: 72px;
-      padding-bottom: 67px;
+      gap: 80px;
+      padding-top: 75px;
+      padding-bottom: 71px;
     }
   }
 
   &--whom {
-    padding-top: 37px;
+    padding-top: 40px;
     padding-bottom: 26px;
 
     @include m.tablet {
-      padding-top: 54px;
-      padding-bottom: 75px;
+      padding-top: 64px;
+      padding-bottom: 66px;
     }
 
     @include m.desktop {
@@ -104,6 +104,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
+      align-items: center;
     }
 
     @include m.desktop {
@@ -117,12 +118,12 @@
 
   @include m.tablet {
     padding-top: 87px;
-    padding-bottom: 53px;
+    padding-bottom: 60px;
   }
 
   @include m.desktop {
-    padding-top: 76px;
-    padding-bottom: 67px;
+    padding-top: 80px;
+    padding-bottom: 65px;
   }
 }
 
@@ -136,7 +137,7 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 123px;
+    gap: 32px 62px;
     padding-top: 57px;
     padding-bottom: 54px;
   }
@@ -161,7 +162,11 @@
   }
 
   @include m.tablet {
-    margin-bottom: 13px;
+    margin-bottom: 17px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 19px;
   }
 }
 
@@ -185,10 +190,14 @@
 }
 
 .form__contacts-input {
+  @include m.desktop {
+    padding: 11px 42px 11px 20px;
+  }
+
   &--mail {
     background-image: url("../img/icons/email.svg");
     background-repeat: no-repeat;
-    background-position: center right 16px;
+    background-position: center right 10px;
 
     &:focus {
       background-image: url("../img/icons/email-focus.svg");
@@ -202,7 +211,7 @@
   &--tel {
     background-image: url("../img/icons/phone-icon.svg");
     background-repeat: no-repeat;
-    background-position: center right 16px;
+    background-position: center right 13px;
 
     &:focus {
       background-image: url("../img/icons/phone-icon-focus.svg");
@@ -219,6 +228,15 @@
   width: 100%;
   padding-right: 10px;
   height: 147px;
+
+  @include m.tablet {
+    padding-top: 17px;
+    height: 174px;
+  }
+
+  @include m.desktop {
+    padding-top: 12px;
+  }
 }
 
 .form__additionally-item {
@@ -227,7 +245,17 @@
 }
 
 .form__button {
-  padding: 12px 10px;
+  padding: 10px;
+  font-size: 16px;
+
+  @include m.tablet {
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  @include m.desktop {
+    padding: 11px;
+  }
 }
 
 .form__explanation {

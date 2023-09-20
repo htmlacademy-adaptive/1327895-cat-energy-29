@@ -12,6 +12,14 @@
   flex-grow: 1;
   width: calc(50% - 13px);
 
+  @include m.tablet {
+    padding: 12px 35px 12px 20px;
+  }
+
+  @include m.desktop {
+    padding: 11px 42px 11px 20px;
+  }
+
   &::placeholder {
     color: #444444;
     opacity: 1;

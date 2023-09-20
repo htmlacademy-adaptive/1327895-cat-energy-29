@@ -6,14 +6,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" as="style">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" type="text/javascript" defer>
-  </script>
-  <script src="./js/main.js" defer></script>
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font"type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU"
+    type="text/javascript" loading="lazy" defer as="script">
+    </script>
+  <script src="./js/main.js" loading="lazy" as="script" defer></script>
 </head>
 
 <body class="page__body  no-js">
@@ -50,7 +53,7 @@
   </header>
   <main class="form-main">
     <section class="ration">
-      <div class="ration__wrapper container">
+      <div class="ration__wrapper container container--form">
         <h1 class="ration__heading heading">Подбор программы</h1>
       <p class="ration__subheading">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
@@ -70,7 +73,6 @@
               <label class="form__data-label text-label" for="age">Возраст (лет):</label>
               <input class="form__input input-text" id="age" type="number" placeholder="7" required>
             </p>
-            </ul>
           </fieldset>
           <fieldset class="form__group form__group--border">
             <h2 class="visually-hidden">Укажите цель составления программы.</h2>
@@ -99,11 +101,11 @@
         </div>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Контактные&nbsp;данные (владельца&nbsp;кота)</span>
             </h2>
           </div>
-          <div class="form__wrapper form__wrapper--contacts container">
+          <div class="form__wrapper form__wrapper--contacts container container--form">
             <p class="form__contacts-item">
               <label class="form__contacts-label text-label" for="e-mail">E-mail:*</label>
               <input class="form__contacts-input form__contacts-input--mail input-text" id="e-mail" type="email"
@@ -118,10 +120,10 @@
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Комментарий</span></h2>
           </div>
-          <div class="form__comment container">
+          <div class="form__comment container container--form">
             <label class="visually-hidden" for="behaviour">Поведение и функционадльная подвижность кота.</label>
           <textarea class="form__group-comment input-text" name="behaviour" id="behaviour" cols="30" rows="8"
             placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -129,11 +131,11 @@
         </fieldset>
         <fieldset class="form__group">
           <div class="form__title-wrapper decoration-line">
-            <h2 class="decoration-line__title title container">
+            <h2 class="decoration-line__title title container container--form">
               <span class="decoration-line__text">Дополнительно</span>
             </h2>
           </div>
-          <div class="form__additionally container">
+          <div class="form__additionally container container--form">
             <p class="form__additionally-item pick">
               <label class="pick__label">
                 <input class="pick__input visually-hidden" type="checkbox" name="supplements" value="sweetener" checked>
@@ -164,7 +166,7 @@
             </p>
           </div>
         </fieldset>
-        <div class="form__wrapper form__wrapper--submit container">
+        <div class="form__wrapper form__wrapper--submit container container--form">
           <button class="form__button button button--primary" type="submit">Отправить заявку</button>
           <span class="form__explanation">* &mdash; Обязательные поля</span>
         </div>
@@ -182,12 +184,18 @@
       </div>
       <div class="address__map" id="map"></div>
       <picture>
-        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
-        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
-        <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
-          alt="Расположение магазина на карте">
+        <source type="image/webp" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x" width="1440"
+          height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x" width="768"
+          height="400" media="(min-width: 768px)">
+          <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x" width="230"
+          height="362">
+        <source srcset="img/location-desktop.png 1x, img/location-desktop@2x.png 2x" width="1440" height="400"
+          media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png 1x, img/location-tablet@2x.png 2x" width="768" height="400"
+          media="(min-width: 768px)">
+        <img class="address__map-image" src="img/location.png" srcset="img/location@2x.png 2x" width="230"
+          height="362" alt="Расположение магазина на карте">
       </picture>
     </section>
   </main>

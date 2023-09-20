@@ -5,15 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" as="style">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font"type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU"
-    type="text/javascript" defer>
+    type="text/javascript" loading="lazy" defer as="script">
     </script>
-  <script src="./js/main.js" defer></script>
+  <script src="./js/main.js" loading="lazy" as="script" defer></script>
 </head>
 
 <body class="page__body no-js">
@@ -61,8 +63,8 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-banner-tablet.webp 1x, img/promo-banner-tablet@2x.webp 2x" width="709" height="609">
             <source type="image/webp" srcset="img/promo-banner-mobile.webp 1x, img/promo-banner-mobile@2x.webp 2x" width="280" height="270">
             <source srcset="img/promo-banner-desktop.png 1x, img/promo-banner-desktop@2x.png 2x" width="280" height="270" media="(min-width: 1440px)">
-            <source srcset="img/promo-banner-tablet.png x1, img/promo-banner-tablet@2x.png 2x" width="709" height="609" media="(min-width: 768px)">
-            <img class="promo__image" src="img/promo-banner-mobile.png" srcset="img/promo-banner-mobile@2x.png x2" width="280" height="270"
+            <source srcset="img/promo-banner-tablet.png 1x, img/promo-banner-tablet@2x.png 2x" width="709" height="609" media="(min-width: 768px)">
+            <img class="promo__image" src="img/promo-banner-mobile.png" srcset="img/promo-banner-mobile@2x.png 2x" width="280" height="270"
               alt="Корм для кошек со вкусом курицы.">
           </picture>
 
@@ -111,7 +113,7 @@
     </section>
     <section class="example">
       <div class="example__wrapper container">
-        <div class="exsample__content">
+        <div class="example__content">
           <h2 class="example__heading heading">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
@@ -137,29 +139,30 @@
         <div class="example__slider slider">
           <div class="slider__image-wrapper image-wrapper-before">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/fat-cat-tablet.webp, img/fat-cat-tablet@2x.webp" width="560" height="512">
-              <source type="image/webp" srcset="img/fat-cat-mobile.webp, img/fat-cat-mobile@2x.webp" width="280" height="556">
-              <source media="(min-width: 1440px)" srcset="img/fat-cat-tablet.png, img/fat-cat-tablet@2x.png" width="560" height="512">
-              <img class="slider__image image-before" src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png" width="280" height="256"
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/fat-cat-tablet.webp 1x, img/fat-cat-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/fat-cat-mobile.webp 1x, img/fat-cat-mobile@2x.webp 2x" width="280" height="556">
+              <source media="(min-width: 1440px)" srcset="img/fat-cat-tablet.png 1x, img/fat-cat-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image image-before" src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png 2x"  width="280" height="256"
               alt="Жирный кот.">
             </picture>
           </div>
           <div class="slider__image-wrapper image-wrapper-after">
             <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.webp, img/skinny-cat-tablet@2x.webp" width="560" height="512">
-              <source type="image/webp" srcset="img/skinny-cat-mobile.webp, img/skinny-cat-mobile@2x.webp" width="280" height="556">
-              <source media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.png, img/skinny-cat-tablet@2x.png" width="560" height="512">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.webp 1x, img/skinny-cat-tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="img/skinny-cat-mobile.webp 1x, img/skinny-cat-mobile@2x.webp 2x" width="280" height="556">
+              <source type="image/webp" srcset="img/skinny-cat-skinny-cat-mobile.webp 1x, img/skinny-cat-mobile@2x.webp 2x" width="280" height="256">
+              <source media="(min-width: 1440px)" srcset="img/skinny-cat-tablet.png 1x, img/skinny-cat-tablet@2x.png 2x" width="560" height="512">
               <img class="slider__image image-after" src="img/skinny-cat-mobile.png" srcset="img/skinny-cat-mobile@2x.png 2x" width="280" height="256"
               alt="Худой кот.">
             </picture>
           </div>
-          <input class="slider__input" type="range" min="0" max="100" value="50" aria-label=""></input>
-          <div class="slider__line" aria-hidden="true"></div>
-          <div class="slider__button">
-            <svg class="footer__icon" width="40" height="40">
+          <input class="slider__input" type="range" min="0" max="100" value="50" aria-label="Кнопка слайдера.">
+          <button class="slider__button">
+            <svg width="40" height="40">
               <use xlink:href="img/sprites/sprite.svg#slider-button"></use>
             </svg>
-          </div>
+          </button>
+          <div class="slider__line" aria-hidden="true"></div>
 
         </div>
       </div>
@@ -176,10 +179,10 @@
       </div>
       <div class="address__map" id="map"></div>
       <picture>
-        <source type="image/webp" srcset="img/location-desktop.webp, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source type="image/webp" srcset="img/location-tablet.webp, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
-        <source srcset="img/location-desktop.png, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
-        <source srcset="img/location-tablet.png, img/location-tablet@2x.png," width="768" height="400" media="(min-width: 768px)">
+        <source type="image/webp" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source type="image/webp" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x" width="768" height="400" media="(min-width: 768px)">
+        <source srcset="img/location-desktop.png 1x, img/location-desktop@2x.png 2x" width="1440" height="400" media="(min-width: 1440px)">
+        <source srcset="img/location-tablet.png 1x, img/location-tablet@2x.png 2x" width="768" height="400" media="(min-width: 768px)">
         <img class="address__map-image" src="img/location.png" srcset="img/location-tablet@2x.png" width="230" height="362"
           alt="Расположение магазина на карте">
       </picture>
@@ -219,7 +222,7 @@
       <div class="footer__developer">
         <a class="footer__developer-link" href="https://htmlacademy.ru/">HTML Academy</a>
         <a class="footer__link" href="https://htmlacademy.ru/">
-          <svg class="footer__icon" width="27" height="34">
+          <svg class="footer__icon" width="27" height="34" role="img">
             <use xlink:href="img/sprites/sprite.svg#html-academy"></use>
           </svg>
         </a>

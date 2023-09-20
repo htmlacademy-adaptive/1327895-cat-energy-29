@@ -87,7 +87,7 @@
 
   &:hover,
   &:focus {
-    color: v.$color-primery; // Узнать про ошибку в Стайлгайде
+    color: v.$color-primary;
   }
 
   &:active {
@@ -101,7 +101,7 @@
 
 .footer__link:hover .footer__icon,
 .footer__link:focus .footer__icon {
-  color: v.$color-primery;
+  color: v.$color-primary;
 }
 
 .footer__link:active .footer__icon {
